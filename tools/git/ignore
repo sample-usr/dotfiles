@@ -1,0 +1,17 @@
+.git/
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+id_rsa
+*.local
+.vagrat/
+*.log
+*.un~
+Session.vim
+.netrwhist
+node_modules
+build/Release
+

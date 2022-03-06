@@ -1,0 +1,24 @@
+[core]
+  editor = /opt/homebrew/bin/code
+  pager = delta
+[User]
+  name = rebebop
+  email = 1941785+rebebop@users.noreply.github.com
+[init]
+  defaultBranch = main
+[filter "lfs"]
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+[push]
+  default = current
+[alias]
+  ll = log --graph --format=\"%C(yellow)%h%C(red)%d%C(reset) - %C(bold green)(%ar)%C(reset) %s %C(blue)<%an>%C(reset)\"
+[pull]
+  rebase = true
+[delta]
+  line-numbers = true
+  theme = "gruvbox-dark"
+  dark = true
+  side-by-side = true

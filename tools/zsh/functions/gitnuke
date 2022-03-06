@@ -1,0 +1,6 @@
+git checkout master
+echo "::Pruning remote references"
+git fetch -p
+echo "::Deleting local branches that are no longer tracked"
+git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D
+

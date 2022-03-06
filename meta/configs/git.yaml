@@ -1,0 +1,3 @@
+- link:
+    ~/.config/git/config: tools/git/config
+    ~/.config/git/ignore: tools/git/ignore

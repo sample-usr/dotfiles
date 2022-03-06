@@ -1,0 +1,6 @@
+# Do nothing if there is no theme specified
+local theme_path="$HOME/.dotfiles/tools/kitty/themes/$1.conf"
+if [[ -n $theme_path ]]; then
+  # Change for current session
+  kitty @ set-colors --all --configured $theme_path
+fi

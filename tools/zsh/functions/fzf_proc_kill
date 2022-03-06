@@ -1,0 +1,15 @@
+local pid_col
+if [[ $OS = Linux ]]; then
+  pid_col=2
+elif [[ $OS = OSX ]]; then
+  pid_col=3;
+else
+  echo 'Error: unknown platform'
+  return
+fi
+local pids=$(
+  ps -f -u $USER | sed 1d | fzf --multi | tr -s [:blank:] | cut -d' ' -f"$pid_col"
+  )
+if [[ -n $pids ]]; then
+  echo "$pids" | xargs kill -9 "$@"
+fi

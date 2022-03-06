@@ -1,0 +1,5 @@
+- shell:
+  -
+    command: ~/.dotfiles/setup/macos_defaults.sh
+    description: Adding defaults for macos 
+    stdout: true

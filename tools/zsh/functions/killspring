@@ -1,0 +1,2 @@
+# Kill all spring processes (for ruby and rails sanity)
+ps aux | grep spring | grep -v 'grep' | awk '{print $2}' | xargs kill

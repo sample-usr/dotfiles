@@ -1,0 +1,4 @@
+- link:
+    ~/.zshenv: shell/.zshenv
+    ~/.config/zsh/.zshenv: tools/zsh/.zshenv
+    ~/.config/zsh/.zshrc: tools/zsh/.zshrc

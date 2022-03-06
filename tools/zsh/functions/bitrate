@@ -1,0 +1,1 @@
+afinfo $1 |grep "bit rate"

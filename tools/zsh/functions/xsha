@@ -1,0 +1,5 @@
+remote_xsha=`curl -sI "$1" | rg x-sha | awk '{print $2}'`
+current_git_sha=`git rev-parse HEAD` 
+
+echo "Remote sha: $remote_xsha"
+echo "Local  sha: $current_git_sha"

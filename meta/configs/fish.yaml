@@ -1,0 +1,4 @@
+- link:
+    ~/.config/fish/config.fish: tools/fish/config.fish
+    ~/.config/starship.toml: tools/starship/starship.toml
+    

@@ -1,0 +1,5 @@
+- shell:
+  -
+    command: ~/.dotfiles/setup/brew.sh
+    description: Installing/Updating homebrew packages
+    stdout: true
