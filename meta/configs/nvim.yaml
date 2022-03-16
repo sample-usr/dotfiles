@@ -1,6 +1,3 @@
 - link:
-    ~/.config/nvim/init.vim: tools/nvim/init.vim  
-    ~/.local/share/nvim/site/autoload/plug.vim: meta/vim-plug/plug.vim
-- shell:
-  - [nvim +'PlugUpdate --sync' --headless +qa]
-  - [python3 -m pip install --upgrade pynvim]
+    ~/.config/nvim/init.lua: tools/nvim/init.lua
+    ~/.config/nvim/lua: tools/nvim/lua/
