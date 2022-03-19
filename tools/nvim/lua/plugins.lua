@@ -31,15 +31,30 @@ return require("packer").startup({
   function(use)
     -- Packer can manage itself
     use({ "wbthomason/packer.nvim" })
-    use({ "nathom/filetype.nvim" })
-    use({ "mcchrish/zenbones.nvim", requires = "rktjmp/lush.nvim" })
-    use({ "kyazdani42/nvim-web-devicons" })
-    use({ "kyazdani42/nvim-tree.lua", config = get_setup("tree") })
+
+    -- LSP
+    use({ "neovim/nvim-lspconfig", config = get_setup("lsp") })
+    use({ "onsails/lspkind-nvim", requires = { { "famiu/bufdelete.nvim" } } })
+    use({ "williamboman/nvim-lsp-installer", config = get_setup("lsp-installer") })
+   
+    -- Autocomplete
     use({
-      "numToStr/Comment.nvim",
-      opt = true,
-      keys = { "gc", "gcc" },
-      config = get_setup("comment"),
+      "hrsh7th/nvim-cmp",
+      requires = {
+        { "hrsh7th/cmp-nvim-lsp" },
+        { "hrsh7th/cmp-nvim-lua" },
+        { "hrsh7th/cmp-buffer" },
+        { "hrsh7th/cmp-path" },
+        { "hrsh7th/cmp-cmdline" },
+        { "hrsh7th/vim-vsnip" },
+        { "hrsh7th/cmp-vsnip" },
+        { "hrsh7th/vim-vsnip-integ" },
+        { "f3fora/cmp-spell" },
+        { "octaltree/cmp-look" },
+        { "hrsh7th/cmp-calc" },
+        { "hrsh7th/cmp-emoji" },
+      },
+      config = get_setup("cmp"),
     })
     use({
       "nvim-telescope/telescope.nvim",
@@ -51,6 +66,31 @@ return require("packer").startup({
         { "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
       },
       config = get_setup("telescope"),
+    })
+
+    -- Syntax
+    use({
+      "nvim-treesitter/nvim-treesitter",
+      config = get_setup("treesitter"),
+      run = ":TSUpdate",
+    })
+    use({ "nvim-treesitter/nvim-treesitter-textobjects" })
+    use({ "slim-template/vim-slim" })
+    use({ "ggandor/lightspeed.nvim" })
+    use({ "tpope/vim-rails" })
+
+    -- Explorer
+    use({ "kyazdani42/nvim-tree.lua", config = get_setup("tree") })
+    use({ "kyazdani42/nvim-web-devicons" })
+
+    -- General
+    use({ "nathom/filetype.nvim" })
+    use({ "mcchrish/zenbones.nvim", requires = "rktjmp/lush.nvim" })
+    use({
+      "numToStr/Comment.nvim",
+      opt = true,
+      keys = { "gc", "gcc" },
+      config = get_setup("comment"),
     })
     use({
       "nvim-lualine/lualine.nvim",
@@ -64,8 +104,9 @@ return require("packer").startup({
       event = "BufReadPre",
       config = get_setup("gitsigns"),
     })
-    use({ "slim-template/vim-slim" })
     use({ "shaeinst/roshnivim-cs" })
+    use({ "tpope/vim-surround" })
+    use({ "tpope/vim-endwise" })
 
     if packer_bootstrap then
       require("packer").sync()
