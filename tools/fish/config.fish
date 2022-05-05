@@ -9,6 +9,10 @@ set -gx XDG_CONFIG_HOME ~/.config
 set -gx XDG_DATA_HOME ~/.local/share
 set -gx XDG_CACHE_HOME ~/.cache
 
+# npm config
+#set -gx NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/config
+#set -gx NPM_CONFIG_CACHE $XDG_CACHE_HOME/npm
+
 # fzf config options
 set -gx FZF_DEFAULT_OPTS "--height=60% --preview-window=right:60%:wrap"
 set -gx FZF_DEFAULT_COMMAND "rg --files --hidden --follow"
@@ -20,7 +24,6 @@ set -gx FZF_ALT_C_OPTS "--preview 'tree -C {} | head -100'"
 # asdf config options
 set -gx ASDF_CONFIG_FILE ~/.config/asdf/.asdfrc
 set -gx ASDF_DATA_DIR ~/.local/share/asdf
-set -gx FLUTTER_ROOT ~/.local/share/asdf/installs/flutter/2.0.4-stable
 set -gx NODEJS_CHECK_SIGNATURES no
 
 # docker config options
@@ -31,14 +34,18 @@ set -gx DOCKER_VOLUMES_DIR ~/.local/share/docker/volumes
 set -gx BUNDLE_USER_HOME ~/.config/bundle
 set -gx BUNDLE_USER_CACHE ~/.cache/bundle
 
-# zsh
-set -gx ZSH_AUTOSUGGEST_USE_ASYNC true
-
 # gnupg
 set -gx GNUPGHOME ~/.config/gnupg
 
 # bat
 set -gx BAT_THEME "gruvbox-dark"
+
+# dotnet-core
+set -gx DOTNET_ROOT $(asdf where dotnet-core)
+set -gx MSBuildSDKsPath $DOTNET_ROOT/sdk/$(basename $DOTNET_ROOT)/Sdks
+set -gx DOTNET_MSBUILD_SDK_RESOLVER_SDKS_VER $(basename $DOTNET_ROOT)
+set -gx DOTNET_MSBUILD_SDK_RESOLVER_SDKS_DIR $DOTNET_ROOT/sdk/$DOTNET_MSBUILD_SDK_RESOLVER_SDKS_VER/Sdks
+set -gx DOTNET_MSBUILD_SDK_RESOLVER_CLI_DIR $DOTNET_ROOT
 
 source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
@@ -63,6 +70,7 @@ alias ni="npm install"
 alias yd="yarn dev"
 
 # general utilities
+
 # get ip address
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 # get local ip address
@@ -76,3 +84,7 @@ alias dok="docker"
 alias dokc="docker compose"
 
 starship init fish | source
+direnv hook fish | source
+# set DOTNET_ROOT
+
+#. $ASDF_DATA_DIR/plugins/dotnet-core/set-dotnet-home.fish

@@ -25,5 +25,16 @@
       - 1.17.1
   - plugin: python
     url: https://github.com/danhper/asdf-python.git
-    global: 3.10.2
-      - 3.10.2
+    global: 3.10.4
+    versions:
+      - 3.10.4
+  - plugin: dotnet-core
+    url: https://github.com/emersonsoares/asdf-dotnet-core
+    global: 6.0.201
+    versions:
+      - 6.0.201
+  - plugin: poetry
+    url: https://github.com/asdf-community/asdf-poetry.git
+    global: 1.2.0b1
+    versions:
+      - 1.2.0b1

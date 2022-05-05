@@ -49,8 +49,6 @@ return require("packer").startup({
         { "hrsh7th/vim-vsnip" },
         { "hrsh7th/cmp-vsnip" },
         { "hrsh7th/vim-vsnip-integ" },
-        { "f3fora/cmp-spell" },
-        { "octaltree/cmp-look" },
         { "hrsh7th/cmp-calc" },
         { "hrsh7th/cmp-emoji" },
       },

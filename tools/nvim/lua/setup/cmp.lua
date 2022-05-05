@@ -34,7 +34,6 @@ cmp.setup({
     { name = "nvim_lsp" },
     { name = "vsnip" },
     { name = "buffer" },
-    { name = "look", keyword_length = 3, option = { convert_case = true, loud = true } },
     { name = "nvim_lua" },
     { name = "calc" },
     { name = "emoji" },
