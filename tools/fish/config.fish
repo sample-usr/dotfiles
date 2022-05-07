@@ -1,6 +1,7 @@
 if status --is-interactive
   eval (/opt/homebrew/bin/brew shellenv)
 end
+
 set -gx LC_ALL en_US.UTF-8
 set -gx EDITOR nvim
 
@@ -83,6 +84,7 @@ alias cat="bat"
 alias dok="docker"
 alias dokc="docker compose"
 
+fish_ssh_agent
 starship init fish | source
 direnv hook fish | source
 # set DOTNET_ROOT
