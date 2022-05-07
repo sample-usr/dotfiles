@@ -1,6 +1,0 @@
-# Upload file to transfer.sh
-# https://github.com/dutchcoders/transfer.sh/
-tmpfile=$( mktemp -t transferXXX )
-curl --progress-bar --upload-file "$1" https://transfer.sh/$(basename $1) >> $tmpfile;
-cat $tmpfile;
-rm -f $tmpfile;

@@ -1,5 +1,5 @@
-- shell:
-  -
-    command: ~/.dotfiles/setup/brew.sh
-    description: Installing/Updating homebrew packages
+- brewfile:
     stdout: true
+    stderr: true
+    include: ['tap', 'brew', 'cask', 'mas']
+    file: /Users/raza/.dotfiles/tools/brew/Brewfile

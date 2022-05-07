@@ -24,7 +24,13 @@ for config in ${@}; do
     suffix="-sudo"
     echo -e "$(<"${BASE_DIR}/${META_DIR}/${BASE_CONFIG}${CONFIG_SUFFIX}")\n$(<"${BASE_DIR}/${META_DIR}/${CONFIG_DIR}/${config%"$suffix"}${CONFIG_SUFFIX}")" > "$configFile"
 
-    cmd=("${BASE_DIR}/${META_DIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASE_DIR}" --plugin-dir meta/dotbot-asdf -c "$configFile")
+    cmd=(
+        "${BASE_DIR}/${META_DIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" 
+        -d "${BASE_DIR}" 
+        --plugin-dir meta/dotbot-asdf 
+        --plugin-dir meta/dotbot-brewfile 
+        -c "$configFile"
+    )
 
     if [[ $config == *"sudo"* ]]; then
         cmd=(sudo "${cmd[@]}")
