@@ -22,6 +22,7 @@ brew "fish"
 brew "starship"
 brew "lazygit"
 brew "direnv"
+brew "azure-cli"
 
 cask "dropbox"
 cask "google-chrome"

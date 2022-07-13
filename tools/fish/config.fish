@@ -50,6 +50,7 @@ set -gx DOTNET_MSBUILD_SDK_RESOLVER_CLI_DIR $DOTNET_ROOT
 
 source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
+
 # directory listings
 alias l="exa -s mod -al --git"
 alias ll="exa -l -s mod --git --time-style=long-iso"
@@ -84,9 +85,10 @@ alias cat="bat"
 alias dok="docker"
 alias dokc="docker compose"
 
+# set DOTNET_ROOT
+. $ASDF_DATA_DIR/plugins/dotnet-core/set-dotnet-home.fish
+
 fish_ssh_agent
 starship init fish | source
 direnv hook fish | source
-# set DOTNET_ROOT
 
-#. $ASDF_DATA_DIR/plugins/dotnet-core/set-dotnet-home.fish
