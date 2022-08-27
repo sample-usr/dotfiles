@@ -46,6 +46,7 @@ cask "rider"
 cask "brave-browser"
 cask "slack"
 cask "postman"
+cask "mixed-in-key"
 
 tap "homebrew/cask-fonts"
 cask "font-victor-mono"

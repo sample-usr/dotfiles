@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# This script will install homebrew and ansible
+
+# Install homebrew if it is not installed already
+if test ! $(which brew); then
+    echo "Installing homebrew..."
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+# Upgrade 
+brew upgrade
+
+# Install ansible
+brew install ansible
