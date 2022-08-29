@@ -1,5 +1,0 @@
-- link:
-    ~/.config/fish/config.fish: tools/fish/config.fish
-    ~/.config/fish/functions: tools/fish/functions
-    ~/.config/starship.toml: tools/starship/starship.toml
-    

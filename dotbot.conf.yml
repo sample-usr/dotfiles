@@ -1,0 +1,30 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: [ '~', '~/.config' ]
+
+- create:
+    - ~/code
+    - ~/notes
+    - ~/screenshots
+
+- link:
+# git
+    ~/.config/git/config: tools/git/config
+    ~/.config/git/ignore: tools/git/ignore
+# alacritty
+    ~/.config/alacritty/alacritty.yml: tools/alacritty/alacritty.yml
+# tmux
+    ~/.config/tmux/tmux.conf: tools/tmux/tmux.conf
+# fish
+    ~/.config/fish/config.fish: tools/fish/config.fish
+    ~/.config/fish/functions: tools/fish/functions
+# starship
+    ~/.config/starship.toml: tools/starship/starship.toml
+# kitty    
+    ~/.config/kitty/kitty.conf: tools/kitty/kitty.conf
+# newovim
+    ~/.config/nvim/init.lua: tools/nvim/init.lua
+    ~/.config/nvim/lua: tools/nvim/lua/
