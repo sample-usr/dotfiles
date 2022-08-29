@@ -1,0 +1,10 @@
+- hosts: localhost
+  vars:
+    - ssh_key_local_path: "ssh/id_ed25519"
+    - ssh_key_path: "{{ lookup('env', 'HOME') }}/.ssh/id_ed25519"
+    - homebrew_brewfile_path: "brew/Brewfile" 
+  tasks:
+    - include: tasks/ssh.yml
+    - include: tasks/brew.yml
+    - include: tasks/change_shell.yml
+

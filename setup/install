@@ -13,3 +13,6 @@ brew upgrade
 
 # Install ansible
 brew install ansible
+
+# Run ansible
+ansible-playbook local.yml --ask-vault-pass

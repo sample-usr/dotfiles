@@ -1,0 +1,2 @@
+- name: Change shell to fish
+  command: echo $(which fish) >> /etc/shells 

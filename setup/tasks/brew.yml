@@ -1,0 +1,2 @@
+- name: Install homebrew packages
+  command: brew bundle --file={{ homebrew_brewfile_path }} --no-lock
