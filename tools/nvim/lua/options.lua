@@ -44,4 +44,4 @@ opt.mouse = "a"
 vim.cmd("au TextYankPost * lua vim.highlight.on_yank {on_visual = true}") -- disabled in visual mode
 -- Give me some fenced codeblock goodness
 vim.g.markdown_fenced_languages = { "html", "javascript", "typescript", "css", "scss", "lua", "vim" }
-vim.cmd([[colorscheme rvcs]]) -- Put your favorite colorscheme here
+vim.cmd([[colorscheme kimbox]]) -- Put your favorite colorscheme here

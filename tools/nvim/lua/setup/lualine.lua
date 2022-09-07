@@ -35,6 +35,7 @@ local function diff_source()
 end
 
 require("lualine").setup({
+  theme = 'auto',
   options = {
     icons_enabled = true,
     component_separators = { " ", " " },

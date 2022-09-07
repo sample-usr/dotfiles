@@ -102,9 +102,9 @@ return require("packer").startup({
       event = "BufReadPre",
       config = get_setup("gitsigns"),
     })
-    use({ "shaeinst/roshnivim-cs" })
     use({ "tpope/vim-surround" })
     use({ "tpope/vim-endwise" })
+    use({ "lmburns/kimbox", config = [[require("kimbox").load()]] })
 
     if packer_bootstrap then
       require("packer").sync()

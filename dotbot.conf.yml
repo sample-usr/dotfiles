@@ -28,3 +28,7 @@
 # newovim
     ~/.config/nvim/init.lua: tools/nvim/init.lua
     ~/.config/nvim/lua: tools/nvim/lua/
+# yabai
+    ~/.config/yabai/yabairc: tools/yabai/yabairc
+# skhd
+    ~/.config/skhd/skhdrc: tools/skhd/skhdrc

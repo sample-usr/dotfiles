@@ -36,7 +36,7 @@ set -gx BUNDLE_USER_HOME ~/.config/bundle
 set -gx BUNDLE_USER_CACHE ~/.cache/bundle
 
 # gnupg
-set -gx GNUPGHOME ~/.config/gnupg
+#set -gx GNUPGHOME ~/.config/gnupg
 
 # bat
 set -gx BAT_THEME "gruvbox-dark"
@@ -63,8 +63,8 @@ alias cpwd="pwd|tr -d '\n'|pbcopy"
 
 # function aliases
 alias ffe="fzf_find_edit"
-alias fcd="fzf_change_dir"
 alias fge="fzf_grep_edit"
+alias fcd="fzf_change_dir"
 alias fpk="fzf_proc_kill"
 alias fgl="fzf_git_log"
 alias change_theme="kitty_change_theme"
