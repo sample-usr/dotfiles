@@ -51,8 +51,8 @@ set -gx DOTNET_MSBUILD_SDK_RESOLVER_CLI_DIR $DOTNET_ROOT
 source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
 # kafka
-set -gx CPPFLAGS -I/usr/local/opt/openssl/include
-set -gx LDFLAGS  -L/usr/local/opt/openssl/lib
+#set -gx CPPFLAGS -I/usr/local/opt/openssl/include
+#set -gx LDFLAGS  -L/usr/local/opt/openssl/lib
 
 # directory listings
 alias l="exa -s mod -al --git"

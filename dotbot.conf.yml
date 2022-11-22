@@ -23,12 +23,6 @@
     ~/.config/fish/functions: tools/fish/functions
 # starship
     ~/.config/starship.toml: tools/starship/starship.toml
-# kitty    
-    ~/.config/kitty/kitty.conf: tools/kitty/kitty.conf
 # newovim
     ~/.config/nvim/init.lua: tools/nvim/init.lua
     ~/.config/nvim/lua: tools/nvim/lua/
-# yabai
-    ~/.config/yabai/yabairc: tools/yabai/yabairc
-# skhd
-    ~/.config/skhd/skhdrc: tools/skhd/skhdrc
