@@ -27,15 +27,14 @@ map("n", "<Leader>]", "<C-W>|", { silent = true })
 map("n", "<Leader>=", "<C-W>=", { silent = true })
 
 -- Telescope
-map("n", "<leader>p", '<cmd>lua require("telescope.builtin").find_files()<cr>')
-map("n", "<leader>r", '<cmd>lua require("telescope.builtin").registers()<cr>')
-map("n", "<leader>g", '<cmd>lua require("telescope.builtin").live_grep()<cr>')
-map("n", "<leader>b", '<cmd>lua require("telescope.builtin").buffers()<cr>')
-map("n", "<leader>j", '<cmd>lua require("telescope.builtin").help_tags()<cr>')
-map("n", "<leader>h", '<cmd>lua require("telescope.builtin").git_bcommits()<cr>')
+map("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
+map("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
+map("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
+map("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
+--map("n", "<leader>h", '<cmd>lua require("telescope.builtin").git_bcommits()<cr>')
 --map("n", "<leader>f", '<cmd>lua require("telescope").extensions.file_browser.file_browser()<CR>')
-map("n", "<leader>s", '<cmd>lua require("telescope.builtin").spell_suggest()<cr>')
-map("n", "<leader>i", '<cmd>lua require("telescope.builtin").git_status()<cr>')
+--map("n", "<leader>s", '<cmd>lua require("telescope.builtin").spell_suggest()<cr>')
+--map("n", "<leader>i", '<cmd>lua require("telescope.builtin").git_status()<cr>')
 --map("n", "<leader>ca", '<cmd>lua require("telescope.builtin").lsp_code_actions()<cr>')
 --map("n", "<leader>cs", '<cmd>lua require("telescope.builtin").lsp_document_symbols()<cr>')
 --map("n", "<leader>cd", '<cmd>lua require("telescope.builtin").diagnostics()<cr>')
@@ -44,5 +43,7 @@ map("n", "<leader>i", '<cmd>lua require("telescope.builtin").git_status()<cr>')
 --map("i", "<F2>", '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
 --map("n", "<leader>cn", '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
 --map("v", "<leader>cn", '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
-map("n", "<leader>ci", "<cmd>lua vim.diagnostic.open_float()<cr>")
+--map("n", "<leader>ci", "<cmd>lua vim.diagnostic.open_float()<cr>")
 
+-- nvim-tree
+map("n", "<leader>e", ":NvimTreeToggle<CR>")
