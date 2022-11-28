@@ -37,6 +37,7 @@ opt.splitbelow = true -- Put new windows below current
 opt.splitright = true -- Put new windows right of current
 opt.termguicolors = true -- You will have bad experience for diagnostic messages when it's default 4000.
 opt.background = "dark"
+opt.iskeyword:append("-") -- consider string-string as whole word
 -- opt.title = true -- Allows neovom to send the Terminal details of the current window, instead of just getting 'v'
 -- vim.o.whichwrap = vim.o.whichwrap .. "<,>" -- Wrap movement between lines in edit mode with arrows
 -- -- opt.cc = "80"
