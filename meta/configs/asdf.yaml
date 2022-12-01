@@ -1,41 +1,41 @@
 - link:
     ~/.config/asdf/.asdfrc: tools/asdf/.asdfrc
 - asdf:
-  - plugin: yarn
-    url: https://github.com/twuni/asdf-yarn.git
-    global: 1.22.17
-    versions:
-      - 1.22.17
-  - plugin: ruby
-    url: https://github.com/asdf-vm/asdf-ruby.git
-    global: 3.1.0
-    versions:
-      - 2.7.3
-      - 3.0.2
-      - 3.1.0
-  - plugin: nodejs
-    url: https://github.com/asdf-vm/asdf-nodejs.git
-    global: 18.4.0
-    versions:
-      - 16.8.0
-      - 18.4.0
-  - plugin: golang
-    url: https://github.com/kennyp/asdf-golang.git 
-    global: 1.17.1
-    versions:
-      - 1.17.1
-  - plugin: python
-    url: https://github.com/danhper/asdf-python.git
-    global: 3.10.4
-    versions:
-      - 3.10.4
-  - plugin: dotnet-core
-    url: https://github.com/emersonsoares/asdf-dotnet-core
-    global: 6.0.201
-    versions:
-      - 6.0.201
-  - plugin: poetry
-    url: https://github.com/asdf-community/asdf-poetry.git
-    global: 1.2.0b1
-    versions:
-      - 1.2.0b1
+    - plugin: yarn
+      url: https://github.com/twuni/asdf-yarn.git
+      global: 1.22.17
+      versions:
+        - 1.22.17
+    - plugin: ruby
+      url: https://github.com/asdf-vm/asdf-ruby.git
+      global: 3.1.3
+      versions:
+        - 2.7.3
+        - 3.0.2
+        - 3.1.3
+    - plugin: nodejs
+      url: https://github.com/asdf-vm/asdf-nodejs.git
+      global: 18.4.0
+      versions:
+        - 16.8.0
+        - 18.4.0
+    - plugin: golang
+      url: https://github.com/kennyp/asdf-golang.git
+      global: 1.17.1
+      versions:
+        - 1.17.1
+    - plugin: python
+      url: https://github.com/danhper/asdf-python.git
+      global: 3.10.4
+      versions:
+        - 3.10.4
+    - plugin: dotnet-core
+      url: https://github.com/emersonsoares/asdf-dotnet-core
+      global: 6.0.201
+      versions:
+        - 6.0.201
+    - plugin: poetry
+      url: https://github.com/asdf-community/asdf-poetry.git
+      global: 1.2.0b1
+      versions:
+        - 1.2.0b1
