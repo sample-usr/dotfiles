@@ -1,9 +1,9 @@
 local function map(mode, lhs, rhs, opts)
-  local options = { noremap = true }
-  if opts then
-    options = vim.tbl_extend("force", options, opts)
-  end
-  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+	local options = { noremap = true }
+	if opts then
+		options = vim.tbl_extend("force", options, opts)
+	end
+	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
 -- Map leader to space
@@ -35,9 +35,11 @@ map("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in cur
 --map("n", "<leader>f", '<cmd>lua require("telescope").extensions.file_browser.file_browser()<CR>')
 --map("n", "<leader>s", '<cmd>lua require("telescope.builtin").spell_suggest()<cr>')
 --map("n", "<leader>i", '<cmd>lua require("telescope.builtin").git_status()<cr>')
---map("n", "<leader>ca", '<cmd>lua require("telescope.builtin").lsp_code_actions()<cr>')
+map("n", "<leader>ca", "<cmd>Lspsaga code_action<cr>")
+map("n", "<leader>ch", "<cmd>Lspsaga hover_doc<cr>")
 --map("n", "<leader>cs", '<cmd>lua require("telescope.builtin").lsp_document_symbols()<cr>')
---map("n", "<leader>cd", '<cmd>lua require("telescope.builtin").diagnostics()<cr>')
+-- map("n", "<leader>cd", '<cmd>lua require("telescope.builtin").diagnostics()<cr>')
+-- map("n", "<leader>ch", '<cmd>lua require("telescope.builtin").diagnostics()<cr>')
 --map("n", "<leader>cr", '<cmd>lua require("telescope.builtin").lsp_references()<cr>')
 --map("n", "<leader>cf", '<cmd>lua require("telescope.builtin").lsp_definitions()<cr>')
 --map("i", "<F2>", '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })

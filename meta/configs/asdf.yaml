@@ -34,6 +34,7 @@
       global: 6.0.201
       versions:
         - 6.0.201
+        - 7.0.102
     - plugin: poetry
       url: https://github.com/asdf-community/asdf-poetry.git
       global: 1.2.0b1

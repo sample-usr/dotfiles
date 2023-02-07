@@ -18,39 +18,71 @@ font:
 
   size: 12
 
-# Colors (Night Owl)
+# Colors (Srcery)
 colors:
-   # Default colors
+  # Default colors
   primary:
-    background: '#011627'
-    foreground: '#d6deeb'
+    background: "#1c1b19"
+    foreground: "#fce8c3"
 
+  # Cursor colors
   cursor:
-    text: '#011627'
-    cursor: '#d6deeb'
+    text: CellBackground
+    cursor: "#fbb829"
 
-  selection:
-    background: '#1b90dd'
-
-   # Normal colors
+  # Normal colors
   normal:
-    black:   '#011627'
-    red:     '#ef5350'
-    green:   '#22da6e'
-    yellow:  '#c5e478'
-    blue:    '#82aaff'
-    magenta: '#c792ea'
-    cyan:    '#21c7a8'
-    white:   '#ffffff'
+    black: "#1c1b19"
+    red: "#ef2f27"
+    green: "#519f50"
+    yellow: "#fbb829"
+    blue: "#2c78bf"
+    magenta: "#e02c6d"
+    cyan: "#0aaeb3"
+    white: "#baa67f"
 
-   # Bright colors
+  # Bright colors
   bright:
-    black:   '#575656'
-    red:     '#ef5350'
-    green:   '#22da6e'
-    yellow:  '#ffeb95'
-    blue:    '#82aaff'
-    magenta: '#c792ea'
-    cyan:    '#7fdbca'
-    white:   '#ffffff'
-
+    black: "#918175"
+    red: "#f75341"
+    green: "#98bc37"
+    yellow: "#fed06e"
+    blue: "#68a8e4"
+    magenta: "#ff5c8f"
+    cyan: "#2be4d0"
+    white: "#fce8c3"
+# Colors (Night Owl)
+# colors:
+#    # Default colors
+#   primary:
+#     background: '#011627'
+#     foreground: '#d6deeb'
+#
+#   cursor:
+#     text: '#011627'
+#     cursor: '#d6deeb'
+#
+#   selection:
+#     background: '#1b90dd'
+#
+#    # Normal colors
+#   normal:
+#     black:   '#011627'
+#     red:     '#ef5350'
+#     green:   '#22da6e'
+#     yellow:  '#c5e478'
+#     blue:    '#82aaff'
+#     magenta: '#c792ea'
+#     cyan:    '#21c7a8'
+#     white:   '#ffffff'
+#
+#    # Bright colors
+#   bright:
+#     black:   '#575656'
+#     red:     '#ef5350'
+#     green:   '#22da6e'
+#     yellow:  '#ffeb95'
+#     blue:    '#82aaff'
+#     magenta: '#c792ea'
+#     cyan:    '#7fdbca'
+#     white:   '#ffffff'

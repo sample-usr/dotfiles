@@ -33,7 +33,8 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim")
 
 	-- colorscheme
-	use("bluz71/vim-nightfly-colors")
+	-- use("bluz71/vim-nightfly-colors")
+	use({ "srcery-colors/srcery-vim", as = "srcery" })
 
 	-- tmux & window navigation
 	use("christoomey/vim-tmux-navigator")
@@ -91,83 +92,11 @@ return packer.startup(function(use)
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
+	-- nunjucks syntax highlighting till we get it in treesitter
+	-- https://github.com/nvim-treesitter/nvim-treesitter/issues/2282
+	use("Glench/Vim-Jinja2-Syntax")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
 end)
-
--------------------------------------------
--- return require("packer").startup({
---   function(use)
---
---     -- LSP
---     use({ "neovim/nvim-lspconfig", config = get_setup("lsp") })
---     use({ "onsails/lspkind-nvim", requires = { { "famiu/bufdelete.nvim" } } })
---     use({ "williamboman/nvim-lsp-installer", config = get_setup("lsp-installer") })
---
---     -- Autocomplete
---     use({
---       "hrsh7th/nvim-cmp",
---       requires = {
---         { "hrsh7th/cmp-nvim-lsp" },
---         { "hrsh7th/cmp-nvim-lua" },
---         { "hrsh7th/cmp-buffer" },
---         { "hrsh7th/cmp-path" },
---         { "hrsh7th/cmp-cmdline" },
---         { "hrsh7th/vim-vsnip" },
---         { "hrsh7th/cmp-vsnip" },
---         { "hrsh7th/vim-vsnip-integ" },
---         { "hrsh7th/cmp-calc" },
---         { "hrsh7th/cmp-emoji" },
---       },
---       config = get_setup("cmp"),
---     })
---     use({
---       "nvim-telescope/telescope.nvim",
---       module = "telescope",
---       cmd = "Telescope",
---       requires = {
---         { "nvim-lua/popup.nvim" },
---         { "nvim-lua/plenary.nvim" },
---         { "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
---       },
---       config = get_setup("telescope"),
---     })
---
---     -- Syntax
---     use({
---       "nvim-treesitter/nvim-treesitter",
---       config = get_setup("treesitter"),
---       run = ":TSUpdate",
---     })
---     use({ "nvim-treesitter/nvim-treesitter-textobjects" })
---     use({ "slim-template/vim-slim" })
---     use({ "ggandor/lightspeed.nvim" })
---     use({ "tpope/vim-rails" })
---
---     -- General
---     use({ "nathom/filetype.nvim" })
---     use({ "mcchrish/zenbones.nvim", requires = "rktjmp/lush.nvim" })
---     use({
---       "lewis6991/gitsigns.nvim",
---       requires = { "nvim-lua/plenary.nvim" },
---       event = "BufReadPre",
---       config = get_setup("gitsigns"),
---     })
---     use({ "tpope/vim-endwise" })
---     use({ "lmburns/kimbox", config = [[require("kimbox").load()]] })
---
---     if packer_bootstrap then
---       require("packer").sync()
---     end
---   end,
---   config = {
---     display = {
---       open_fn = require("packer.util").float,
---     },
---     profile = {
---       enable = true,
---       threshold = 1, -- the amount in ms that a plugins load time must be over for it to be included in the profile
---     },
---   },
--- })
