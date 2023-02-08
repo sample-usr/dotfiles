@@ -87,6 +87,7 @@ alias vi="nvim"
 alias cat="bat"
 alias dok="docker"
 alias dokc="docker compose"
+alias lg="lazygit"
 
 # set DOTNET_ROOT
 . $ASDF_DATA_DIR/plugins/dotnet-core/set-dotnet-home.fish

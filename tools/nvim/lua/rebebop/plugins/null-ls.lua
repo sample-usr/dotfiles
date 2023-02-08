@@ -4,8 +4,8 @@ if not setup then
 	return
 end
 
-local formatting = null_ls.builtins.formatting -- to setup formatters
-local diagnostics = null_ls.builtins.diagnostics -- to setup linters
+local f = null_ls.builtins.formatting -- to setup formatters
+local d = null_ls.builtins.diagnostics -- to setup linters
 
 -- to setup format on save
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
@@ -14,18 +14,19 @@ null_ls.setup({
 	sources = {
 		--  to disable file types use
 		--  "formatting.prettier.with({disabled_filetypes: {}})" (see null-ls docs)
-		formatting.prettier, -- js/ts formatter
-		formatting.stylua, -- lua formatter
-		diagnostics.eslint_d.with({ -- js/ts linter
+		f.prettier, -- js/ts formatter
+		f.stylua, -- lua formatter
+		d.eslint_d.with({ -- js/ts linter
 			-- only enable eslint if root has .eslintrc.js
 			condition = function(utils)
 				return utils.root_has_file(".eslintrc.js")
 			end,
 		}),
-		diagnostics.hadolint,
-		formatting.jq,
-		diagnostics.rubocop,
-		formatting.rubocop,
+		d.hadolint,
+		f.jq,
+		d.rubocop,
+		f.rubocop,
+		f.terraform_fmt,
 	},
 	-- configure format on save
 	on_attach = function(current_client, bufnr)

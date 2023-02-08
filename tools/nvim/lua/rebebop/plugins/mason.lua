@@ -39,16 +39,8 @@ mason_lspconfig.setup({
 })
 
 mason_null_ls.setup({
-	-- list of formatters & linters for mason to install
-	ensure_installed = {
-		"prettier", -- ts/js formatter
-		"stylua", -- lua formatter
-		"eslint_d", -- ts/js linter
-		"hadolint", -- docker linter
-		"jq", -- json linter
-		"rubocop", -- ruby linter
-		"tflint", -- terraform linter
-	},
+	ensure_installed = nil,
+	automatic_setup = false,
 	-- auto-install configured formatters & linters (with null-ls)
 	automatic_installation = true,
 })
