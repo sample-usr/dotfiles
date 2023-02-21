@@ -30,3 +30,5 @@
     # newovim
     ~/.config/nvim/init.lua: tools/nvim/init.lua
     ~/.config/nvim/lua: tools/nvim/lua/
+    # lazygit
+    ~/.config/lazygit/config.yml: tools/lazygit/config.yml
