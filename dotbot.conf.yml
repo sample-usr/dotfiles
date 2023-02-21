@@ -3,7 +3,11 @@
       create: true
       relink: true
 
-- clean: [ '~', '~/.config' ]
+- clean: ["~"]
+
+- clean:
+    ~/.config:
+      recursive: true
 
 - create:
     - ~/code
@@ -11,18 +15,18 @@
     - ~/screenshots
 
 - link:
-# git
+    # git
     ~/.config/git/config: tools/git/config
     ~/.config/git/ignore: tools/git/ignore
-# alacritty
-    ~/.config/alacritty/alacritty.yml: tools/alacritty/alacritty.yml
-# tmux
+    # alacritty
+    ~/.config/alacritty/: tools/alacritty/
+    # tmux
     ~/.config/tmux/tmux.conf: tools/tmux/tmux.conf
-# fish
+    # fish
     ~/.config/fish/config.fish: tools/fish/config.fish
     ~/.config/fish/functions: tools/fish/functions
-# starship
+    # starship
     ~/.config/starship.toml: tools/starship/starship.toml
-# newovim
+    # newovim
     ~/.config/nvim/init.lua: tools/nvim/init.lua
     ~/.config/nvim/lua: tools/nvim/lua/
