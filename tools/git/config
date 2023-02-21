@@ -1,5 +1,5 @@
 [core]
-  editor = /opt/homebrew/bin/code
+  editor = /opt/homebrew/bin/nvim
   pager = delta
 [User]
   name = rebebop
