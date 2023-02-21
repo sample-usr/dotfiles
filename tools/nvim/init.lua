@@ -4,6 +4,7 @@ require("rebebop.core.mappings")
 require("rebebop.core.colorscheme")
 
 -- plugins
+require("rebebop.plugins.catppuccin")
 require("rebebop.plugins.comment")
 require("rebebop.plugins.nvim-tree")
 require("rebebop.plugins.lualine")

@@ -34,7 +34,9 @@ return packer.startup(function(use)
 
 	-- colorscheme
 	-- use("bluz71/vim-nightfly-colors")
-	use({ "srcery-colors/srcery-vim", as = "srcery" })
+	-- use({ "srcery-colors/srcery-vim", as = "srcery" })
+	-- use("rebelot/kanagawa.nvim")
+	use({ "catppuccin/nvim", as = "catppuccin" })
 
 	-- tmux & window navigation
 	use("christoomey/vim-tmux-navigator")
