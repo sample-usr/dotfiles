@@ -25,6 +25,7 @@
     # fish
     ~/.config/fish/config.fish: tools/fish/config.fish
     ~/.config/fish/functions: tools/fish/functions
+    ~/.config/fish/themes/catppuccin_mocha.theme: tools/fish/themes/catppuccin_mocha.theme
     # starship
     ~/.config/starship.toml: tools/starship/starship.toml
     # newovim
