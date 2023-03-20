@@ -1,4 +1,9 @@
+os:
+  editCommand: "nvim"
+  editCommandTemplate: "{{editor}} +{{line}} -- {{filename}}"
+
 gui:
+  showIcons: true
   theme:
     lightTheme: false
     activeBorderColor:
