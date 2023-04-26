@@ -4,22 +4,22 @@ env:
 # Font
 font:
   normal:
-    family: JetBrainsMono Nerd Font Mono
-    style: Regular
+    family: FiraCode Nerd Font
+  #   style: Regular
+  #
+  # bold:
+  #   family: Monofur Nerd Font
+  #   style: Bold
+  #
+  # italic:
+  #   family: Monofur Nerd Font
+  #   style: Italic
+  #
+  # bold_italic:
+  #   family: Monofur Nerd Font
+  #   style: Bold Italic
 
-  bold:
-    family: JetBrainsMono Nerd Font Mono
-    style: Bold
-
-  italic:
-    family: JetBrainsMono Nerd Font Mono
-    style: Italic
-
-  bold_italic:
-    family: JetBrainsMono Nerd Font Mono
-    style: Bold Italic
-
-  size: 13
+  size: 18
 
 cursor:
   style:
@@ -29,3 +29,4 @@ cursor:
 # Theme
 import:
   - ~/.config/alacritty/themes/catppuccin-mocha.yml
+

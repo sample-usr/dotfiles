@@ -29,7 +29,6 @@
     # starship
     ~/.config/starship.toml: tools/starship/starship.toml
     # newovim
-    ~/.config/nvim/init.lua: tools/nvim/init.lua
-    ~/.config/nvim/lua: tools/nvim/lua/
+    ~/.config/nvim/: tools/nvim/
     # lazygit
     ~/.config/lazygit/config.yml: tools/lazygit/config.yml

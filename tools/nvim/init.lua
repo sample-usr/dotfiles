@@ -1,19 +1,2 @@
-require("rebebop.plugins-setup")
-require("rebebop.core.options")
-require("rebebop.core.mappings")
-require("rebebop.core.colorscheme")
-
--- plugins
-require("rebebop.plugins.catppuccin")
-require("rebebop.plugins.comment")
-require("rebebop.plugins.nvim-tree")
-require("rebebop.plugins.lualine")
-require("rebebop.plugins.telescope")
-require("rebebop.plugins.nvim-cmp")
-require("rebebop.plugins.mason")
-require("rebebop.plugins.lspsaga")
-require("rebebop.plugins.lspconfig")
-require("rebebop.plugins.null-ls")
-require("rebebop.plugins.autopairs")
-require("rebebop.plugins.treesitter")
-require("rebebop.plugins.gitsigns")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
