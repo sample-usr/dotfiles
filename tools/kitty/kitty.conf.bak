@@ -24,6 +24,6 @@ tab_bar_style hidden
 
 
 # BEGIN_KITTY_THEME
-# kanagawabones
+# Mona Lisa
 include current-theme.conf
 # END_KITTY_THEME
