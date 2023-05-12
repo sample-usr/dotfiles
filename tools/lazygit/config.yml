@@ -1,6 +1,5 @@
 os:
-  editCommand: "nvim"
-  editCommandTemplate: "{{editor}} +{{line}} -- {{filename}}"
+  editPreset: "nvim"
 
 gui:
   showIcons: true
