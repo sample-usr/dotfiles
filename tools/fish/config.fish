@@ -1,5 +1,5 @@
 if status --is-interactive
-  eval (/opt/homebrew/bin/brew shellenv)
+    eval (/opt/homebrew/bin/brew shellenv)
 end
 
 set -gx LC_ALL en_US.UTF-8
@@ -28,7 +28,7 @@ set -gx ASDF_DATA_DIR ~/.local/share/asdf
 set -gx NODEJS_CHECK_SIGNATURES no
 
 # docker config options
-set -gx DOCKER_CONFIG ~/.config/docker 
+set -gx DOCKER_CONFIG ~/.config/docker
 set -gx DOCKER_VOLUMES_DIR ~/.local/share/docker/volumes
 
 # bundler config
@@ -39,7 +39,7 @@ set -gx BUNDLE_USER_CACHE ~/.cache/bundle
 #set -gx GNUPGHOME ~/.config/gnupg
 
 # bat
-set -gx BAT_THEME "gruvbox-dark"
+set -gx BAT_THEME gruvbox-dark
 
 # dotnet-core
 set -gx DOTNET_ROOT $(asdf where dotnet-core)
@@ -49,6 +49,9 @@ set -gx DOTNET_MSBUILD_SDK_RESOLVER_SDKS_DIR $DOTNET_ROOT/sdk/$DOTNET_MSBUILD_SD
 set -gx DOTNET_MSBUILD_SDK_RESOLVER_CLI_DIR $DOTNET_ROOT
 
 source /opt/homebrew/opt/asdf/libexec/asdf.fish
+
+# set LS_COLORS theme via vivid
+set -gx LS_COLORS $(vivid generate lava)
 
 # kafka
 #set -gx CPPFLAGS -I/usr/local/opt/openssl/include
@@ -95,4 +98,3 @@ alias lg="lazygit"
 fish_ssh_agent
 starship init fish | source
 direnv hook fish | source
-
