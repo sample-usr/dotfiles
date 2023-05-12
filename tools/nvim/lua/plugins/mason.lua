@@ -20,6 +20,7 @@ return {
         "terraform-ls",
         "yaml-language-server",
         "omnisharp",
+        "elixir-ls",
       },
     },
   },
