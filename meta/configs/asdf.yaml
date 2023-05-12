@@ -39,3 +39,13 @@
       global: 1.2.0b1
       versions:
         - 1.2.0b1
+    - plugin: elixir
+      url: https://github.com/asdf-vm/asdf-elixir.git
+      global: 1.14.4
+      versions:
+        - 1.14.4
+    - plugin: erlang
+      url: https://github.com/asdf-vm/asdf-erlang.git
+      global: 25.3.1 
+      versions:
+        - 25.3.1
