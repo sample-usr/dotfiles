@@ -5,8 +5,7 @@
     - homebrew_brewfile_path: "brew/Brewfile" 
     - home_path: "{{lookup('env', 'HOME')}}/.dotfiles"
   tasks:
-    - include: tasks/ssh.yml
-    - include: tasks/create_links.yml
-    - include: tasks/brew.yml
-    - include: tasks/change_shell.yml
-
+    - import_tasks: tasks/add-ssh-keys.yml
+    - import_tasks: tasks/create-links.yml
+    - import_tasks: tasks/install-brew-packages.yml
+    - import_tasks: tasks/change-shell.yml

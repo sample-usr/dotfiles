@@ -1,5 +1,0 @@
-- brewfile:
-    stdout: true
-    stderr: true
-    include: ['tap', 'brew', 'cask', 'mas']
-    file: /Users/raza/.dotfiles/tools/brew/Brewfile
