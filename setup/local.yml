@@ -3,8 +3,10 @@
     - ssh_key_local_path: "ssh/id_ed25519"
     - ssh_key_path: "{{ lookup('env', 'HOME') }}/.ssh/id_ed25519"
     - homebrew_brewfile_path: "brew/Brewfile" 
+    - home_path: "{{lookup('env', 'HOME')}}/.dotfiles"
   tasks:
     - include: tasks/ssh.yml
+    - include: tasks/create_links.yml
     - include: tasks/brew.yml
     - include: tasks/change_shell.yml
 
