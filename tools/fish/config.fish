@@ -93,8 +93,9 @@ alias dokc="docker compose"
 alias lg="lazygit"
 
 # set DOTNET_ROOT
-. $ASDF_DATA_DIR/plugins/dotnet-core/set-dotnet-home.fish
+# . $ASDF_DATA_DIR/plugins/dotnet-core/set-dotnet-home.fish
 
+fish_add_path ~/.docker/bin
 fish_ssh_agent
 starship init fish | source
 direnv hook fish | source

@@ -1,5 +1,5 @@
 font_family Hurmit Nerd Font Mono
-font_size 15
+font_size 14
 enable_audio_bell no
 cursor_shape block
 
@@ -20,10 +20,10 @@ draw_minimal_borders yes
 
 tab_bar_style hidden
 
-# include ~/.dotfiles/tools/kitty/themes/ayu_light.conf
+include ~/.dotfiles/tools/kitty/themes/gruvbox_light.conf
 
 
 # BEGIN_KITTY_THEME
-# Mona Lisa
-include current-theme.conf
+# Gruvbox Light Hard
+# include current-theme.conf
 # END_KITTY_THEME
