@@ -51,7 +51,7 @@ set -gx DOTNET_MSBUILD_SDK_RESOLVER_CLI_DIR $DOTNET_ROOT
 source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
 # set LS_COLORS theme via vivid
-set -gx LS_COLORS $(vivid generate lava)
+# set -gx LS_COLORS $(vivid generate lava)
 
 # kafka
 #set -gx CPPFLAGS -I/usr/local/opt/openssl/include
