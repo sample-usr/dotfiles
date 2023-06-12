@@ -1,6 +1,6 @@
 - name: Ensure .ssh directory exists
   file:
-    dest: {{ ssh_key_path | dirname }}
+    dest: "{{ ssh_key_path | dirname }}"
     state: directory
   tags:
     - ssh
