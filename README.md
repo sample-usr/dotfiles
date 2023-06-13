@@ -19,16 +19,7 @@ I am a fan of `XDG` spec so the config files for tools are defined at `$HOME/.co
 - [fzf](https://github.com/junegunn/fzf) - fuzzy find all the things ;)
 - [ripgrep](https://github.com/BurntSushi/ripgrep) - faster alternative to `grep`
 
-## Installation
-You can select whatever you want to setup/install in the `meta/profiles/workstation` file (you can create one for each of your machines).
-
-```bash
-# clone the repo at ~/.dotfiles
-./install-profile workstation
-```
-
-
 ---
-### New Installation
+### Installation
 1. Execute the file `install` which will install `homebrew` and `ansible`.
 This will also start the `local.yml` ansible playbook.
