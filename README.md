@@ -26,3 +26,9 @@ You can select whatever you want to setup/install in the `meta/profiles/workstat
 # clone the repo at ~/.dotfiles
 ./install-profile workstation
 ```
+
+
+---
+### New Installation
+1. Execute the file `install` which will install `homebrew` and `ansible`.
+This will also start the `local.yml` ansible playbook.

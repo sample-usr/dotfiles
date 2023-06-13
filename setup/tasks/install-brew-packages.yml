@@ -1,2 +1,97 @@
+- name: Tap homebrew nerd font cask
+  community.general.homebrew_tap:
+    name: homebrew/cask-fonts
+
 - name: Install homebrew packages
-  command: brew bundle --file={{ homebrew_brewfile_path }} --no-lock
+  community.general.homebrew:
+    name: "{{item}}"
+    state: present
+  with_items:
+    - tmux
+    - ansible
+    - asdf
+    - azure-cli
+    - bat
+    - direnv
+    - exa
+    - exercism
+    - fd
+    - ffmpeg
+    - fish
+    - flyctl
+    - fzf
+    - gh
+    - git
+    - git-delta
+    - gnupg
+    - helm
+    - highlight
+    - jq
+    - imagemagick
+    - kopia
+    - lazydocker
+    - lazygit
+    - neovim
+    - openjdk
+    - tmux
+    - overmind
+    - postgresql@15
+    - redis
+    - ripgrep
+    - starship
+    - terraform
+    - tree
+    - youtube-dl
+    - gpg
+
+- name: Install homebrew cask packages
+  community.general.homebrew_cask:
+    name: "{{item}}"
+    state: present
+  with_items:
+    - 1password
+    - android-platform-tools
+    - appcleaner
+    - bitwarden
+    - calibre
+    - cyberduck
+    - datagrip
+    - devtoys
+    - discord
+    - docker
+    - dropbox
+    - firefox
+    - flux
+    - font-3270-nerd-font
+    - font-caskaydia-cove-nerd-font
+    - font-cousine-nerd-font
+    - font-fira-code-nerd-font
+    - font-hurmit-nerd-font
+    - font-jetbrains-mono-nerd-font
+    - font-monofur-nerd-font
+    - font-monoid-nerd-font
+    - font-victor-mono-nerd-font
+    - google-chrome
+    - kap
+    - kitty
+    - lens
+    - maczip
+    - megasync
+    - microsoft-teams
+    - mixed-in-key
+    - motrix
+    - obsidian
+    - parallels
+    - postman
+    - raspberry-pi-imager
+    - rekordbox
+    - rider
+    - slack
+    - steam
+    - telegram
+    - transmission
+    - tunnelblick
+    - visual-studio-code
+    - vlc
+    - whatsapp
+    - zoom

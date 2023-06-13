@@ -1,4 +1,5 @@
 - hosts: localhost
   tasks:
+    - import_tasks: tasks/install-brew-packages.yml
     - import_tasks: tasks/install-asdf-packages.yml
 
