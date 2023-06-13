@@ -1,26 +1,41 @@
-- name: Install asdf plugins
+- name: "Install asdf plugins"
+  register: result
   shell: |
-    asdf plugin add python https://github.com/danhper/asdf-python.git
-    asdf plugin add dotnet-core https://github.com/emersonsoares/asdf-dotnet-core
-    asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git
-    asdf plugin add elixir https://github.com/asdf-vm/asdf-elixir.git
-    asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-    asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
-    asdf plugin add yarn https://github.com/twuni/asdf-yarn.git
+    source /opt/homebrew/opt/asdf/libexec/asdf.sh 
+    asdf plugin add {{item}}
+  failed_when: result.rc != 0 and result.stderr | regex_search('(Plugin named .* already added)') == ''
+  with_items:
+    - python
+    - dotnet-core
+    - erlang
+    - elixir
+    - ndoejs
+    - ruby
+    - yarn
 
 - name: Install asdf plugin packages
   shell: |
-    asdf install python 3.10.4
-    asdf global python 3.10.4
-    asdf install dotnet-core 7.0.302
-    asdf global dotnet-core 7.0.302
-    asdf install erlang 26.0
-    asdf global erlang 26.0
-    asdf install elixir 1.15.0
-    asdf global elixir 1.15.0
-    asdf install nodejs lts
-    asdf global nodejs lts
-    asdf install yarn 1.22.19
-    asdf global yarn 1.22.19
-    asdf install ruby 3.1.3
-    asdf global ruby 3.1.3
+    source /opt/homebrew/opt/asdf/libexec/asdf.sh 
+    asdf install {{item}}
+  with_items:
+    - "python 3.10.4"
+    - "dotnet-core 7.0.302"
+    - "erlang 26.0"
+    - "elixir 1.14.5"
+    - "nodejs 18.16.0"
+    - "nodejs 16.13.0"
+    - "yarn 1.22.19"
+    - "ruby 3.1.3"
+
+- name: Set global asdf plugin packages
+  shell: |
+    source /opt/homebrew/opt/asdf/libexec/asdf.sh 
+    asdf global {{item}} 
+  with_items:
+    - "python 3.10.4"
+    - "dotnet-core 7.0.302"
+    - "erlang 26.0"
+    - "elixir 1.14.5"
+    - "nodejs 18.16.0"
+    - "yarn 1.22.19"
+    - "ruby 3.1.3"
