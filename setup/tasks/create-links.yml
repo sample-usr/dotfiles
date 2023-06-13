@@ -6,6 +6,9 @@
     - ~/code
     - ~/notes
     - ~/screenshots
+    - ~/.config
+    - ~/.config/fish
+    - ~/.config/lazygit
 
 - name: Create git symlink
   file:

@@ -1,9 +1,9 @@
 - hosts: localhost
+  # become: no
   vars:
-    - ssh_key_local_path: "ssh/id_ed25519"
-    - ssh_key_path: "{{ lookup('env', 'HOME') }}/.ssh/id_ed25519"
-    - homebrew_brewfile_path: "brew/Brewfile" 
+    - ssh_directory_path: "{{ lookup('env', 'HOME') }}/.ssh"
     - home_path: "{{lookup('env', 'HOME')}}/.dotfiles"
+    - current_user: "{{ ansible_user_id }}"
   tasks:
     - import_tasks: tasks/add-ssh-keys.yml
     - import_tasks: tasks/create-links.yml

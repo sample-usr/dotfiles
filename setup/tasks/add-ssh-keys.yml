@@ -1,28 +1,12 @@
 - name: Ensure .ssh directory exists
   file:
-    dest: "{{ ssh_key_path | dirname }}"
+    dest: "{{ lookup('env', 'HOME') }}/.ssh"
     state: directory
-  tags:
-    - ssh
+    mode: '700'
 
-- name: Install ssh key
+- name: Install ssh keys
   copy:
-    src: "{{ ssh_key_local_path }}"
-    dest: "{{ ssh_key_path }}"
-  tags:
-    - ssh
-
-- name: Install public ssh key
-  copy:
-    src: "{{ ssh_key_local_path }}.pub"
-    dest: "{{ ssh_key_path }}.pub"
-  tags:
-    - ssh
-
-- name: Set authorized ssh keys
-  authorized_key:
-    user: "{{ lookup('env', 'USER') }}"
-    state: present
-    key: "{{ ssh_key_path }}.pub"
+    src: "{{item}}"
+    dest: "{{ ssh_directory_path }}/"
   with_fileglob:
-  - "{{ lookup('env', 'HOME') }}/.ssh/*.pub"
+    - "ssh/*"

@@ -1,2 +1,5 @@
 - name: Change shell to fish
-  command: echo $(which fish) >> /etc/shells 
+  become: yes
+  user:
+    name: "{{ current_user }}"
+    shell: /opt/homebrew/bin/fish 
