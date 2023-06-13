@@ -1,0 +1,175 @@
+- name: Change dock icon size to 36 pixels 
+  osx_defaults:
+    domain: com.apple.dock
+    type: int
+    key: tilesize
+    value: 36
+    state: present
+
+- name: Autohide the dock when the mouse is out
+  osx_defaults:
+    domain: com.apple.dock
+    type: bool
+    key: authohide
+    value: true
+    state: present
+
+- name: Do not show recent apps in the dock 
+  osx_defaults:
+    domain: com.apple.dock
+    type: bool
+    key: show-recents
+    value: false
+    state: present
+
+- name: Change window minimzation effect to scale
+  osx_defaults:
+    domain: com.apple.dock
+    type: string
+    key: mineffect
+    value: scale
+    state: present
+
+- name: Show all file extensions inside Finder 
+  osx_defaults:
+    domain: NSGlobalDomain
+    type: bool
+    key: AppleShowAllExtensions
+    value: true
+    state: present
+
+- name: Change default location of screenshots to ~/screenshots/
+  osx_defaults:
+    domain: com.apple.screencapture
+    type: string
+    key: location
+    value: ~/screenshots
+    state: present
+
+- name: Show path bar breadcrumbs in Finder 
+  osx_defaults:
+    domain: com.apple.finder
+    type: bool
+    key: ShowPathbar
+    value: true
+    state: present
+
+- name: Show status bar in Finder 
+  osx_defaults:
+    domain: com.apple.finder
+    type: bool
+    key: ShowStatusBar
+    value: true
+    state: present
+
+- name: Always show scrollbars 
+  osx_defaults:
+    domain: NSGlobalDomain 
+    type: string
+    key: AppleShowScrollBars 
+    value: Always
+    state: present
+
+- name: Save to disk (not to iCloud) by default
+  osx_defaults:
+    domain: NSGlobalDomain 
+    type: bool 
+    key: NSDocumentSaveNewDocumentsToCloud 
+    value: false
+    state: present
+
+- name: Trackpad - Enable tap to click
+  osx_defaults:
+    domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    type: bool 
+    key: Clicking
+    value: true
+    state: present
+
+- name: Show hidden files inside Finder 
+  osx_defaults:
+    domain: com.apple.finder
+    type: bool 
+    key: AppleShowAllFiles
+    value: true
+    state: present
+
+- name: Default view style for Finder set to List 
+  osx_defaults:
+    domain: com.apple.finder
+    type: string
+    key: FXPreferredViewStyle 
+    value: Nlsv
+    state: present
+
+- name: Keep folders on top in Finder 
+  osx_defaults:
+    domain: com.apple.finder
+    type: bool
+    key: _FXSortFoldersFirst 
+    value: true
+    state: present
+
+- name: Do not show file extension change warning 
+  osx_defaults:
+    domain: com.apple.finder
+    type: bool
+    key: FXEnableExtensionChangeWarning 
+    value: false
+    state: present
+
+- name: Change menubar digital clock format to EEE d HH:mm 
+  osx_defaults:
+    domain: com.apple.menuextra.clock
+    type: string
+    key: DateFormat 
+    value: "EEE d HH:mm"
+    state: present
+
+- name: Set very fasy keyboard repeat rate 
+  osx_defaults:
+    domain: NSGlobalDomain
+    type: int
+    key: KeyRepeat 
+    value: 1
+    state: present
+
+- name: Set very fasy keyboard repeat rate pt.2
+  osx_defaults:
+    domain: NSGlobalDomain
+    type: int
+    key: InitialKeyRepeat
+    value: 10
+    state: present
+
+- name: No warning when emptying the trash 
+  osx_defaults:
+    domain: com.apple.finder 
+    type: bool
+    key: WarnOnEmptyTrash 
+    value: false
+    state: present
+
+- name: Minimize windows into their application’s icon
+  osx_defaults:
+    domain: com.apple.dock
+    type: bool
+    key: minimize-to-application
+    value: true
+    state: present
+
+- name: Show all processes in ActivityMonitor 
+  osx_defaults:
+    domain: com.apple.ActivityMonitor
+    type: int
+    key: ShowCategory 
+    value: 0
+    state: present
+
+- name: Download updates in the background automatically 
+  osx_defaults:
+    domain: com.apple.SoftwareUpdate
+    type: int
+    key: AutomaticDownload 
+    value: 1
+    state: present

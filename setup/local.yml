@@ -1,11 +1,14 @@
 - hosts: localhost
-  # become: no
+  become: yes
+  become_user: "{{ lookup('env', 'USER') }}"
   vars:
     - ssh_directory_path: "{{ lookup('env', 'HOME') }}/.ssh"
     - home_path: "{{lookup('env', 'HOME')}}/.dotfiles"
-    - current_user: "{{ ansible_user_id }}"
+    - current_user: "{{ lookup('env', 'USER') }}"
   tasks:
     - import_tasks: tasks/add-ssh-keys.yml
     - import_tasks: tasks/create-links.yml
     - import_tasks: tasks/install-brew-packages.yml
     - import_tasks: tasks/change-shell.yml
+    - import_tasks: tasks/install-asdf-packages.yml
+    - import_tasks: tasks/setup-macos-defaults.yml
