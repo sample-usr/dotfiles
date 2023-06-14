@@ -1,0 +1,25 @@
+""" Map leader to space """
+let mapleader = " "
+imap jk <ESC>
+
+set relativenumber
+
+set ideajoin
+
+nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
+
+map <leader>ca <Action>(ShowIntentionActions)
+map gd <Action>(GotoImplementation)<CR>
+map <leader>ff <Action>(SearchEverywhere)<CR>
+
+sethandler <c-j> a:vim
+sethandler <c-k> a:vim
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+
+Plug 'easymotion/vim-easymotion'
+map <leader>J <Plug>(easymotion-s)
+map <leader>j <Plug>(easymotion-f)
+

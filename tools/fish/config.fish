@@ -96,6 +96,7 @@ alias lg="lazygit"
 # . $ASDF_DATA_DIR/plugins/dotnet-core/set-dotnet-home.fish
 
 fish_add_path ~/.docker/bin
+fish_add_path ~/.dotnet/tools
 fish_ssh_agent
 starship init fish | source
 direnv hook fish | source
