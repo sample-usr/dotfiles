@@ -6,6 +6,9 @@
 if test ! "$(which brew)"; then
 	echo "Installing homebrew..."
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+	(echo echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >>~/.zprofile
+	eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # Upgrade
@@ -15,4 +18,4 @@ brew upgrade
 brew install ansible
 
 # Run ansible
-ansible-playbook local.yml --ask-vault-pass
+ansible-playbook local.yml --ask-vault-pass --ask-become-pass
