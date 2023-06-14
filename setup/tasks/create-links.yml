@@ -57,3 +57,15 @@
     src: "{{home_path}}/tools/lazygit/config.yml"
     dest: ~/.config/lazygit/config.yml
     state: link
+
+- name: Crate ideavim symlink 
+  file:
+    src: "{{home_path}}/tools/ideavim"
+    dest: ~/.config/ideavim
+    state: link
+
+- name: Crate karabiner symlink 
+  file:
+    src: "{{home_path}}/tools/karabiner/karabiner.json"
+    dest: ~/.config/karabiner/karabiner.json
+    state: link
