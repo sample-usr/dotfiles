@@ -97,6 +97,9 @@ alias lg="lazygit"
 
 fish_add_path ~/.docker/bin
 fish_add_path ~/.dotnet/tools
+
 fish_ssh_agent
+
 starship init fish | source
 direnv hook fish | source
+zoxide init fish | source

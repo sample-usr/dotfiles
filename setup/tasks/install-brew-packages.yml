@@ -43,6 +43,7 @@
     - tree
     - youtube-dl
     - gpg
+    - zoxide
 
 - name: Install homebrew cask packages
   community.general.homebrew_cask:
