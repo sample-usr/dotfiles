@@ -66,6 +66,6 @@
 
 - name: Crate karabiner symlink 
   file:
-    src: "{{home_path}}/tools/karabiner/karabiner.json"
-    dest: ~/.config/karabiner/karabiner.json
+    src: "{{home_path}}/tools/karabiner"
+    dest: ~/.config/karabiner
     state: link

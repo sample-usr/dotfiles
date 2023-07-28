@@ -13,11 +13,11 @@
               {
                 "description": "Right shift -> Hyper Key",
                 "from": {
-                  "key_code": "quote"
+                  "key_code": "right_shift"
                 },
                 "to": [
                   {
-                    "key_code": "left_shift",
+                    "key_code": "right_shift",
                     "modifiers": [
                       "left_command",
                       "left_control",
@@ -27,7 +27,7 @@
                 ],
                 "to_if_alone": [
                   {
-                    "key_code": "quote"
+                    "key_code": "right_shift"
                   }
                 ],
                 "type": "basic"
