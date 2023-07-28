@@ -57,6 +57,9 @@ source /opt/homebrew/opt/asdf/libexec/asdf.fish
 #set -gx CPPFLAGS -I/usr/local/opt/openssl/include
 #set -gx LDFLAGS  -L/usr/local/opt/openssl/lib
 
+set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
+set -gx ANDROID_HOME /opt/homebrew/share/android-commandlinetools/
+
 # directory listings
 alias l="exa -s mod -al --git"
 alias ll="exa -l -s mod --git --time-style=long-iso"
@@ -91,12 +94,17 @@ alias cat="bat"
 alias dok="docker"
 alias dokc="docker compose"
 alias lg="lazygit"
+alias rider="open -na \"Rider.app\" --args $argv"
 
 # set DOTNET_ROOT
 # . $ASDF_DATA_DIR/plugins/dotnet-core/set-dotnet-home.fish
 
 fish_add_path ~/.docker/bin
 fish_add_path ~/.dotnet/tools
+fish_add_path /opt/homebrew/share/android-commandlinetools/emulator
+#fish_add_path /opt/homebrew/share/android-commandlinetools/cmdline-tools/latest/bin/
+fish_add_path /opt/homebrew/Caskroom/android-platform-tools/34.0.3
+
 
 fish_ssh_agent
 
