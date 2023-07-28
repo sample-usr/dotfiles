@@ -21,6 +21,7 @@ return {
         "yaml-language-server",
         "omnisharp",
         "elixir-ls",
+        "ansible-lint",
       },
     },
   },

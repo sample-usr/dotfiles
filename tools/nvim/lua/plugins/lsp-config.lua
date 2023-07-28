@@ -9,6 +9,15 @@ return {
           },
         },
       },
+      ansiblels = {
+        settings = {
+          ansible = {
+            ansibleLint = {
+              enabled = true,
+            },
+          },
+        },
+      },
     },
   },
 }

@@ -7,10 +7,10 @@ return {
       operators = false,
       folds = false,
     },
-    contrast = "hard",
+    contrast = "soft",
     palette_overrides = {
-      light0 = "#E6C293",
-      light1 = "#E3BC82",
+      -- light0 = "#E6C293",
+      -- light1 = "#E3BC82",
     },
   },
 }
