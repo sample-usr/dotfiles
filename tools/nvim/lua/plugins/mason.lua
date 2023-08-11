@@ -22,6 +22,7 @@ return {
         "omnisharp",
         "elixir-ls",
         "ansible-lint",
+        "ruff-lsp",
       },
     },
   },

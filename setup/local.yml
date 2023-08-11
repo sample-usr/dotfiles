@@ -7,8 +7,8 @@
     - current_user: "{{ lookup('env', 'USER') }}"
   tasks:
     # - import_tasks: tasks/add-ssh-keys.yml
-    - import_tasks: tasks/create-links.yml
+    # - import_tasks: tasks/create-links.yml
     # - import_tasks: tasks/install-brew-packages.yml
     # - import_tasks: tasks/change-shell.yml
-    # - import_tasks: tasks/install-asdf-packages.yml
+    - import_tasks: tasks/install-asdf-packages.yml
     # - import_tasks: tasks/setup-macos-defaults.yml

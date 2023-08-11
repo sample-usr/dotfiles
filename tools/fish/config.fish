@@ -58,7 +58,7 @@ source /opt/homebrew/opt/asdf/libexec/asdf.fish
 #set -gx LDFLAGS  -L/usr/local/opt/openssl/lib
 
 set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
-set -gx ANDROID_HOME /opt/homebrew/share/android-commandlinetools/
+set -gx ANDROID_HOME ~/Library/Android/sdk
 
 # directory listings
 alias l="exa -s mod -al --git"
