@@ -23,6 +23,7 @@ return {
         "elixir-ls",
         "ansible-lint",
         "ruff-lsp",
+        "prettierd",
       },
     },
   },
