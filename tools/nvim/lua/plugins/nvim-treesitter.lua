@@ -22,7 +22,6 @@ return {
         "ruby",
         "gitignore",
         "c_sharp",
-        "elixir",
       },
     },
   },

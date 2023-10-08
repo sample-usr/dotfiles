@@ -56,9 +56,10 @@ source /opt/homebrew/opt/asdf/libexec/asdf.fish
 # kafka
 #set -gx CPPFLAGS -I/usr/local/opt/openssl/include
 #set -gx LDFLAGS  -L/usr/local/opt/openssl/lib
-
-set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
+#
+set -gx JAVA_HOME /opt/homebrew/opt/openjdk@17/
 set -gx ANDROID_HOME ~/Library/Android/sdk
+set -gx CPPFLAGS "-I/opt/homebrew/opt/openjdk@17/include"
 
 # directory listings
 alias l="exa -s mod -al --git"
@@ -111,3 +112,6 @@ fish_ssh_agent
 starship init fish | source
 direnv hook fish | source
 zoxide init fish | source
+
+# Created by `pipx` on 2023-10-02 07:12:14
+set PATH $PATH /Users/raza/.local/bin
