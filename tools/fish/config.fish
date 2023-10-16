@@ -58,6 +58,7 @@ source /opt/homebrew/opt/asdf/libexec/asdf.fish
 #set -gx LDFLAGS  -L/usr/local/opt/openssl/lib
 #
 set -gx JAVA_HOME /opt/homebrew/opt/openjdk@17/
+set -gx EXE4J_JAVA_HOME /opt/homebrew/opt/openjdk@17/
 set -gx ANDROID_HOME ~/Library/Android/sdk
 set -gx CPPFLAGS "-I/opt/homebrew/opt/openjdk@17/include"
 

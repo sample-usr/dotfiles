@@ -12,8 +12,7 @@ return {
         base = "#010116",
         mantle = "#01012B",
         crust = "#01012B",
-        blue = "#FF2A6D",
-        overlay0 = "#05D9E8",
+        -- blue = "#FF2A6D",
       },
     },
     integrations = {

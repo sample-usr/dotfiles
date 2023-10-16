@@ -1,7 +1,7 @@
 -- Autocmds are automatically loaded on the VeryLazy event
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 -- Add any additional autocmds here
-require("lazyvim.util").on_attach(function(client, _)
+require("lazyvim.util").lsp.on_attach(function(client, _)
   -- create the autocmd to show diagnostics
   if client.name == "omnisharp" then
     local tokenModifiers = client.server_capabilities.semanticTokensProvider.legend.tokenModifiers

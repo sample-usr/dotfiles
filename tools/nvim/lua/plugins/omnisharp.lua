@@ -5,7 +5,7 @@ return {
       -- configure omnisharp to fix the semanntic token bug https://github.com/OmniSharp/omnisharp-roslyn/issues/2483
       setup = {
         omnisharp = function(_, _)
-          require("lazyvim.util").on_attach(function(client, _)
+          require("lazyvim.util").lsp.on_attach(function(client, _)
             if client.name == "omnisharp" then
               client.server_capabilities.semanticTokensProvider = {
                 full = vim.empty_dict(),
