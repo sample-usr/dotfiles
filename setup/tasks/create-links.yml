@@ -1,4 +1,4 @@
-- name: Create main directories 
+- name: Create main directories
   file:
     path: "{{item}}"
     state: directory
@@ -34,7 +34,7 @@
     dest: ~/.config/fish/config.fish
     state: link
 
-- name: Create fish functions symlink 
+- name: Create fish functions symlink
   file:
     src: "{{home_path}}/tools/fish/functions"
     dest: ~/.config/fish/functions
@@ -46,26 +46,32 @@
     dest: ~/.config/starship.toml
     state: link
 
-- name: Create nvim symlink 
+- name: Create nvim symlink
   file:
     src: "{{home_path}}/tools/nvim"
     dest: ~/.config/nvim
     state: link
 
-- name: Crate lazygit symlink 
+- name: Crate lazygit symlink
   file:
     src: "{{home_path}}/tools/lazygit/config.yml"
     dest: ~/.config/lazygit/config.yml
     state: link
 
-- name: Crate ideavim symlink 
+- name: Crate ideavim symlink
   file:
     src: "{{home_path}}/tools/ideavim"
     dest: ~/.config/ideavim
     state: link
 
-- name: Crate karabiner symlink 
+- name: Crate karabiner symlink
   file:
     src: "{{home_path}}/tools/karabiner"
     dest: ~/.config/karabiner
+    state: link
+
+- name: Crate wezterm symlink
+  file:
+    src: "{{home_path}}/tools/wezterm"
+    dest: ~/.config/wezterm
     state: link

@@ -3,7 +3,7 @@
 -- Add any additional keymaps here
 vim.keymap.set("i", "jk", "<ESC>")
 
-vim.cmd("highlight NeoTreeGitUntracked gui=none")
+-- vim.cmd("highlight NeoTreeGitUntracked gui=none")
 -- vim.cmd([[
 -- highlight NeoTreeGitConflict gui=bold
 -- highlight NeoTreeGitUntracked gui=none

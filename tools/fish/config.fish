@@ -94,7 +94,7 @@ alias cleanupds="find . -type f -name '*.DS_Store' -ls -exec /bin/rm {} \;"
 alias vi="nvim"
 alias cat="bat"
 alias dok="docker"
-alias dokc="docker compose"
+alias dokc="docker-compose"
 alias lg="lazygit"
 alias rider="open -na \"Rider.app\" --args $argv"
 
