@@ -5,8 +5,8 @@ local config = wezterm.config_builder()
 
 -- settings
 config.color_scheme = "Adventure"
-config.font = wezterm.font("Hurmit Nerd Font Mono")
-config.font_size = 14
+config.font = wezterm.font("Iosevka Nerd Font Mono")
+config.font_size = 16
 config.scrollback_lines = 3000
 config.leader = { key = "b", mods = "CTRL" }
 
@@ -14,6 +14,10 @@ config.leader = { key = "b", mods = "CTRL" }
 config.inactive_pane_hsb = {
 	saturation = 0.24,
 	brightness = 0.5,
+}
+
+config.window_frame = {
+	font = wezterm.font({ family = "Noto Sans", weight = "Regular" }),
 }
 
 -- keys
@@ -54,4 +58,5 @@ config.keys = {
 	-- Workspace keybindings
 	{ key = "w", mods = "LEADER", action = act.ShowLauncherArgs({ flags = "FUZZY|WORKSPACES" }) },
 }
+
 return config
