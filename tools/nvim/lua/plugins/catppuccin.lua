@@ -1,6 +1,6 @@
 return {
   "catppuccin/nvim",
-  enabled = false,
+  enabled = true,
   lazy = true,
   name = "catppuccin",
   opts = {
@@ -10,9 +10,9 @@ return {
     },
     color_overrides = {
       mocha = {
-        base = "#010116",
-        mantle = "#01012B",
-        crust = "#01012B",
+        base = "#000000",
+        -- mantle = "#1C1B1A",
+        -- crust = "#e0ec7a",
         -- blue = "#FF2A6D",
       },
     },
