@@ -1,0 +1,51 @@
+- name: Create main directories
+  file:
+    path: "{{item}}"
+    state: directory
+  loop:
+    - ~/code
+    - ~/.config
+    - ~/.config/fish
+    - ~/.config/lazygit
+
+- name: Create git symlink
+  file:
+    src: "{{home_path}}/tools/git"
+    dest: ~/.config/git
+    state: link
+
+- name: Create tmux symlink
+  file:
+    src: "{{home_path}}/tools/tmux"
+    dest: ~/.config/tmux
+    state: link
+
+- name: Create fish config symlink
+  file:
+    src: "{{home_path}}/tools/fish/config.fish"
+    dest: ~/.config/fish/config.fish
+    state: link
+
+- name: Create fish functions symlink
+  file:
+    src: "{{home_path}}/tools/fish/functions"
+    dest: ~/.config/fish/functions
+    state: link
+
+- name: Create starship symlink
+  file:
+    src: "{{home_path}}/tools/starship/starship.toml"
+    dest: ~/.config/starship.toml
+    state: link
+
+- name: Create nvim symlink
+  file:
+    src: "{{home_path}}/tools/nvim"
+    dest: ~/.config/nvim
+    state: link
+
+- name: Crate lazygit symlink
+  file:
+    src: "{{home_path}}/tools/lazygit/config.yml"
+    dest: ~/.config/lazygit/config.yml
+    state: link
