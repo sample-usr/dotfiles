@@ -10,10 +10,35 @@ return {
     },
     color_overrides = {
       mocha = {
-        base = "#000000",
-        -- mantle = "#1C1B1A",
-        -- crust = "#e0ec7a",
-        -- blue = "#FF2A6D",
+        base = "#0C0807",
+        crust = "#2B1C19",
+        mantle = "#130C0A",
+        text = "#FCE8C3",
+        lavender = "#BD4F01",
+        blue = "#D75F00", -- should rename it
+        teal = "#0AAEB3",
+        sky = "#6db0bc",
+        rosewater = "#938684",
+        flamingo = "#796666",
+        pink = "#93748B",
+        red = "#A6290D",
+        green = "#C4845A",
+        yellow = "#FBB829",
+        maroon = "#BB2902",
+        peach = "#FAB418",
+        mauve = "#7693A6",
+        sapphire = "#394D72",
+
+        -- defaults
+
+        subtext1 = "#bac2de",
+        subtext0 = "#a6adc8",
+        overlay2 = "#9399b2",
+        overlay1 = "#7f849c",
+        overlay0 = "#6c7086",
+        surface2 = "#585b70",
+        surface1 = "#45475a",
+        surface0 = "#313244",
       },
     },
     integrations = {

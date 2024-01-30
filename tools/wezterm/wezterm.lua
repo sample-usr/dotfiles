@@ -8,7 +8,7 @@ config.color_scheme = "Adventure"
 config.font = wezterm.font("Iosevka Nerd Font Mono")
 config.font_size = 18
 config.scrollback_lines = 3000
-config.leader = { key = "b", mods = "CTRL" }
+config.leader = { key = ";", mods = "CTRL" }
 
 -- Dim inactive panes
 config.inactive_pane_hsb = {
@@ -23,7 +23,7 @@ config.window_frame = {
 -- keys
 config.keys = {
 	-- send C-b when C-b is pressed twice
-	{ key = "b", mods = "LEADER", action = act.SendKey({ key = "b", mods = "CTRL" }) },
+	{ key = ";", mods = "LEADER", action = act.SendKey({ key = "b", mods = "CTRL" }) },
 	{ key = "[", mods = "LEADER", action = act.ActivateCopyMode },
 
 	-- Pane keybindings
