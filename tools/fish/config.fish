@@ -48,7 +48,6 @@ set -gx DOTNET_MSBUILD_SDK_RESOLVER_SDKS_VER $(basename $DOTNET_ROOT)
 set -gx DOTNET_MSBUILD_SDK_RESOLVER_SDKS_DIR $DOTNET_ROOT/sdk/$DOTNET_MSBUILD_SDK_RESOLVER_SDKS_VER/Sdks
 set -gx DOTNET_MSBUILD_SDK_RESOLVER_CLI_DIR $DOTNET_ROOT
 
-source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
 # set LS_COLORS theme via vivid
 # set -gx LS_COLORS $(vivid generate lava)
@@ -108,11 +107,11 @@ fish_add_path /opt/homebrew/share/android-commandlinetools/emulator
 fish_add_path /opt/homebrew/Caskroom/android-platform-tools/34.0.3
 
 
+# Created by `pipx` on 2023-10-02 07:12:14
+set PATH $PATH /Users/raza/.local/bin
+
+source /opt/homebrew/opt/asdf/libexec/asdf.fish
 fish_ssh_agent
 
 starship init fish | source
-direnv hook fish | source
 zoxide init fish | source
-
-# Created by `pipx` on 2023-10-02 07:12:14
-set PATH $PATH /Users/raza/.local/bin

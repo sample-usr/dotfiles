@@ -22,6 +22,7 @@ return {
         "ruby",
         "gitignore",
         "c_sharp",
+        "nix",
       },
     },
   },

@@ -15,7 +15,7 @@ return {
         mantle = "#130C0A",
         text = "#FCE8C3",
         blue = "#FF5F00",
-        lavender = "#D75F00",
+        lavender = "#C25600",
         teal = "#0AAEB3",
         sky = "#b04901",
         rosewater = "#938684",
