@@ -96,6 +96,8 @@ alias dok="docker"
 alias dokc="docker-compose"
 alias lg="lazygit"
 alias rider="open -na \"Rider.app\" --args $argv"
+alias anspk="ansible-playbook"
+alias ansvt="ansible-vault"
 
 # set DOTNET_ROOT
 # . $ASDF_DATA_DIR/plugins/dotnet-core/set-dotnet-home.fish

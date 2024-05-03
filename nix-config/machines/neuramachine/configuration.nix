@@ -17,7 +17,7 @@
 
   programs.fish.enable = true;
 
-  environment.systemPackages = with pkgs; [ neofetch nixfmt ];
+  environment.systemPackages = with pkgs; [ neofetch ];
 
   homebrew = {
     enable = true;
