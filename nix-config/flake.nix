@@ -24,7 +24,7 @@
           home-manager.useUserPackages = true;
           home-manager.verbose = true;
           home-manager.users.raza.imports =
-            [ ./machines/neuramachine/h-manager.nix ];
+            [ ./machines/neuramachine/home-manager.nix ];
         }
       ];
     };

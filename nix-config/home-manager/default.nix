@@ -2,7 +2,10 @@
 
 let isDarwin = pkgs.stdenv.isDarwin;
 in {
-  imports = [ ./direnv ];
+  imports = [
+    ./settings/direnv.nix
+    ./settings/alacritty.nix
+  ];
 
   config = {
     # This number determines which home-manager release is compatible with your
@@ -21,6 +24,6 @@ in {
 
     home.packages = with pkgs; [ ];
 
-    home.sessionVariables = { EDITOR = "vim"; };
+    home.sessionVariables = { EDITOR = "nvim"; };
   };
 }
