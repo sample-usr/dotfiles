@@ -17,7 +17,9 @@
 
   programs.fish.enable = true;
 
-  environment.systemPackages = with pkgs; [ neofetch ];
+  environment.systemPackages = with pkgs; [ 
+    neofetch
+  ];
 
   homebrew = {
     enable = true;

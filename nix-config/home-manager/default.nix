@@ -22,7 +22,12 @@ in {
 
     fonts.fontconfig.enable = true;
 
-    home.packages = with pkgs; [ ];
+    home.packages = with pkgs; [
+      ripgrep
+      fd
+      eza
+      cyberduck
+    ];
 
     home.sessionVariables = { EDITOR = "nvim"; };
   };

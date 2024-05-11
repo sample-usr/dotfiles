@@ -62,8 +62,8 @@ set -gx ANDROID_HOME ~/Library/Android/sdk
 set -gx CPPFLAGS "-I/opt/homebrew/opt/openjdk@17/include"
 
 # directory listings
-alias l="exa -s mod -al --git"
-alias ll="exa -l -s mod --git --time-style=long-iso"
+alias l="eza -s mod -al --git"
+alias ll="eza -l -s mod --git --time-style=long-iso"
 alias ..="cd .."
 alias tree="tree -A"
 alias cpwd="pwd|tr -d '\n'|pbcopy"
