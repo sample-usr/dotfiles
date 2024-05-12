@@ -5,6 +5,7 @@ in {
   imports = [
     ./settings/direnv.nix
     ./settings/alacritty.nix
+    ./settings/git.nix
   ];
 
   config = {
@@ -17,16 +18,24 @@ in {
     # will work.
     home.stateVersion = "24.05";
 
-    # Let home-manager install and manage itself.
-    programs.home-manager.enable = true;
+    # programs without any extensive configuration
+    programs = {
+      home-manager.enable = true;
+      eza.enable = true;
+      fd.enable = true;
+      ripgrep.enable = true;
+      fzf.enable = true;
+      zoxide.enable = true;
+      gh.enable = true;
+      bat.enable = true;
+    };
 
     fonts.fontconfig.enable = true;
 
     home.packages = with pkgs; [
-      ripgrep
-      fd
-      eza
       cyberduck
+      ansible
+      ansible-lint
     ];
 
     home.sessionVariables = { EDITOR = "nvim"; };
