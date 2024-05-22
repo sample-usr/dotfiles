@@ -3,6 +3,13 @@
     enable = true;
     userName = "rebebop";
     userEmail = "1941785+rebebop@users.noreply.github.com";
+
+    extraConfig = {
+      pull = {
+        rebase = true;
+      };
+    };
+
     aliases = {
       co = "checkout";
       cob = "checkout -b";

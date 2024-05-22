@@ -8,6 +8,7 @@
 
   # Replace with "x86_64-darwin" if it's an Intel system
   nixpkgs.hostPlatform = "aarch64-darwin";
+  nixpkgs.config.allowUnfree = true;
 
   # The user that will be running `nix-darwin`
   users.users.raza = {
@@ -23,9 +24,15 @@
 
   homebrew = {
     enable = true;
+    onActivation = {
+      autoUpdate = true;
+      upgrade = true;
+    };
     # onActivation.cleanup = "uninstall";
     taps = [ ];
     brews = [ ];
-    casks = [ ];
+    casks = [
+      "google-chrome"
+    ];
   };
 }
