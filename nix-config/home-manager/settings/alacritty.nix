@@ -4,10 +4,10 @@
     settings = {
       font = {
         normal = { 
-          family = "JetBrainsMono Nerd Font Mono"; 
+          family = "BerkeleyMono Nerd Font Mono"; 
           style = "Regular";
         };
-        size = 14;
+        size = 15;
       };
     };
   };

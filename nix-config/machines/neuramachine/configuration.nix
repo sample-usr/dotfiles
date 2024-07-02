@@ -20,6 +20,7 @@
 
   environment.systemPackages = with pkgs; [ 
     neofetch
+    android-tools
   ];
 
   homebrew = {
@@ -34,5 +35,8 @@
     casks = [
       "google-chrome"
     ];
+    masApps = {
+      "Canary Mail" = 1236045954;
+    };
   };
 }

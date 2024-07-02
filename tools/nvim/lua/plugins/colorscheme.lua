@@ -7,6 +7,9 @@ return {
     end,
   },
   {
+    "rebelot/kanagawa.nvim",
+  },
+  {
     dir = "~/code/rakis.nvim",
     lazy = false,
     priority = 1000,
@@ -17,7 +20,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "rakis",
+      colorscheme = "kanagawa",
     },
   },
 }

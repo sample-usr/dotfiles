@@ -6,6 +6,7 @@ in {
     ./settings/direnv.nix
     ./settings/alacritty.nix
     ./settings/git.nix
+    ./settings/zellij.nix
   ];
 
   config = {
@@ -27,6 +28,7 @@ in {
       fzf.enable = true;
       zoxide.enable = true;
       gh.enable = true;
+      gh-dash.enable = true;
       bat.enable = true;
     };
 
