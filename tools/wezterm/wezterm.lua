@@ -6,7 +6,8 @@ local config = wezterm.config_builder()
 -- settings
 config.hide_tab_bar_if_only_one_tab = true
 -- config.color_scheme = "s3r0 modified (terminal.sexy)"
-config.color_scheme = "Sea Shells (Gogh)"
+-- config.color_scheme = "Gruvbox (Gogh)"
+config.color_scheme = "Hacktober"
 -- config.color_scheme = "Fahrenheit"
 config.font = wezterm.font("BerkeleyMono Nerd Font Mono")
 config.font_size = 15
