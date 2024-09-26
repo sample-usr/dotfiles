@@ -16,11 +16,15 @@
     home = "/Users/raza";
   };
 
+  # Disable bottom right hot corner for macOS notes
+  system.defaults.dock.wvous-br-corner = 1;
+
   programs.fish.enable = true;
 
   environment.systemPackages = with pkgs; [ 
     neofetch
     android-tools
+    timewarrior # not available in home-manager yet
   ];
 
   homebrew = {

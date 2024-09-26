@@ -7,6 +7,7 @@ in {
     ./settings/alacritty.nix
     ./settings/git.nix
     ./settings/zellij.nix
+    ./settings/taskwarrior.nix
   ];
 
   config = {
