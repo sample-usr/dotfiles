@@ -25,22 +25,35 @@
     neofetch
     android-tools
     timewarrior # not available in home-manager yet
+    nb # command line note taking
   ];
 
   homebrew = {
     enable = true;
+
     onActivation = {
       autoUpdate = true;
       upgrade = true;
+      # cleanup = uninstall;
     };
-    # onActivation.cleanup = "uninstall";
-    taps = [ ];
-    brews = [ ];
-    casks = [
-      "google-chrome"
+
+    global = {
+      autoUpdate = true;
+    };
+
+    brews = [
     ];
+
+    taps = [
+      "nikitabobko/tap"
+    ];
+
+    casks = [
+      "aerospace"
+    ];
+
     masApps = {
-      "Canary Mail" = 1236045954;
+      # "Canary Mail" = 1236045954;
     };
   };
 }

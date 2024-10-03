@@ -8,6 +8,7 @@ in {
     ./settings/git.nix
     ./settings/zellij.nix
     ./settings/taskwarrior.nix
+    ./settings/aerospace
   ];
 
   config = {
