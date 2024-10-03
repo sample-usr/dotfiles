@@ -1,5 +1,0 @@
-os:
-  editPreset: "nvim"
-
-gui:
-  showIcons: true

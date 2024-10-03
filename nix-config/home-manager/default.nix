@@ -4,11 +4,11 @@ let isDarwin = pkgs.stdenv.isDarwin;
 in {
   imports = [
     ./settings/direnv.nix
-    ./settings/alacritty.nix
     ./settings/git.nix
     ./settings/zellij.nix
     ./settings/taskwarrior.nix
     ./settings/aerospace
+    ./settings/starship.nix
   ];
 
   config = {

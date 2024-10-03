@@ -1,4 +1,4 @@
-{ pkgs, home-manager, ... }:
+{ pkgs, ... }:
 
 {
   security.pam.enableSudoTouchIdAuth = true;
@@ -6,11 +6,9 @@
   nix.settings.experimental-features = "nix-command flakes";
   system.stateVersion = 4;
 
-  # Replace with "x86_64-darwin" if it's an Intel system
   nixpkgs.hostPlatform = "aarch64-darwin";
   nixpkgs.config.allowUnfree = true;
 
-  # The user that will be running `nix-darwin`
   users.users.raza = {
     name = "raza";
     home = "/Users/raza";
@@ -50,6 +48,35 @@
 
     casks = [
       "aerospace"
+      "bitwarden"
+      "kap"
+      "firefox"
+      "bruno"
+      "1password"
+      "android-studio"
+      "datagrip"
+      "discord"
+      "docker"
+      "figma"
+      "font-fira-code-nerd-font"
+      "font-hack-nerd-font"
+      "font-jetbrains-mono-nerd-font"
+      "font-victor-mono-nerd-font"
+      "google-chrome"
+      "jdownloader"
+      "karabiner-elements"
+      "mixed-in-key"
+      "moonlight"
+      "native-access"
+      "obsidian"
+      "reactotron"
+      "slack"
+      "steam"
+      "stremio"
+      "zed"
+      "vlc"
+      "wezterm"
+      "zoom"
     ];
 
     masApps = {

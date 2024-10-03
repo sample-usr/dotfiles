@@ -1,13 +1,23 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
 
+local function scheme_for_appearance(appearance)
+	if appearance:find("Dark") then
+		return "rakis-dark"
+	else
+		return "rakis-light"
+	end
+end
+
 local config = wezterm.config_builder()
 
 -- settings
 config.hide_tab_bar_if_only_one_tab = true
+config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
 -- config.color_scheme = "s3r0 modified (terminal.sexy)"
 -- config.color_scheme = "Gruvbox (Gogh)"
-config.color_scheme = "Hacktober"
+-- config.color_scheme = "Hacktober"
+-- config.color_scheme = "Tokyo Night"
 -- config.color_scheme = "Fahrenheit"
 config.font = wezterm.font("BerkeleyMono Nerd Font Mono")
 config.font_size = 15
@@ -25,6 +35,50 @@ config.window_padding = {
 	right = 0,
 	top = 0,
 	bottom = 0,
+}
+
+config.keys = {
+	{ key = "[", mods = "LEADER", action = act.ActivateCopyMode },
+}
+
+-- rakis color schemes
+config.color_schemes = {
+	["rakis-dark"] = {
+		foreground = "#ae8069",
+		background = "#0c0908",
+
+		cursor_bg = "#ae8069",
+		cursor_fg = "#0c0908",
+		cursor_border = "#ae8069",
+
+		selection_fg = "#ae8069",
+		selection_bg = "#38231e",
+
+		scrollbar_thumb = "#0c0908",
+		split = "#0c0908",
+
+		ansi = { "#0c0908", "#e83c30", "#5d895b", "#f2a50c", "#3386c1", "#694e91", "#3d888e", "#ae8069" },
+		brights = { "#38231e", "#fc9891", "#a2c3a1", "#fbdb9c", "#8cbbdd", "#ad97cd", "#8fc8d0", "#ae8069" },
+		indexed = { [16] = "#d66000", [17] = "#e83c30" },
+	},
+	["rakis-light"] = {
+		foreground = "#ae8069",
+		background = "#f1ebba",
+
+		cursor_bg = "#ae8069",
+		cursor_fg = "#f1ebba",
+		cursor_border = "#ae8069",
+
+		selection_fg = "#ae8069",
+		selection_bg = "#f5e6b2",
+
+		scrollbar_thumb = "#f1ebba",
+		split = "#f1ebba",
+
+		ansi = { "#f1ebba", "#5f1610", "#304530", "#6c4c03", "#184c71", "#3c2e50", "#224e52", "#ae8069" },
+		brights = { "#f5e6b2", "#e83c30", "#5d895b", "#f2a50c", "#3386c1", "#694e91", "#3d888e", "#ae8069" },
+		indexed = { [16] = "#723502", [17] = "#5f1610" },
+	},
 }
 
 -- config.window_frame = {
