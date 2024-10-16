@@ -1,5 +1,55 @@
 local wezterm = require("wezterm")
+local project_dir = wezterm.home_dir .. "/code"
 local act = wezterm.action
+
+local function project_dirs()
+	-- Start with your home directory as a project, 'cause you might want
+	-- to jump straight to it sometimes.
+	local projects = { wezterm.home_dir }
+
+	-- WezTerm comes with a glob function! Let's use it to get a lua table
+	-- containing all subdirectories of your project folder.
+	for _, dir in ipairs(wezterm.glob(project_dir .. "/*")) do
+		-- ... and add them to the projects table.
+		table.insert(projects, dir)
+	end
+
+	return projects
+end
+
+local function choose_project()
+	local choices = {}
+	for _, value in ipairs(project_dirs()) do
+		table.insert(choices, { label = value })
+	end
+
+	return wezterm.action.InputSelector({
+		title = "Projects",
+		choices = choices,
+		fuzzy = true,
+		action = wezterm.action_callback(function(child_window, child_pane, id, label)
+			-- "label" may be empty if nothing was selected. Don't bother doing anything
+			-- when that happens.
+			if not label then
+				return
+			end
+
+			-- The SwitchToWorkspace action will switch us to a workspace if it already exists,
+			-- otherwise it will create it for us.
+			child_window:perform_action(
+				wezterm.action.SwitchToWorkspace({
+					-- We'll give our new workspace a nice name, like the last path segment
+					-- of the directory we're opening up.
+					name = label:match("([^/]+)$"),
+					-- Here's the meat. We'll spawn a new terminal with the current working
+					-- directory set to the directory that was picked.
+					spawn = { cwd = label },
+				}),
+				child_pane
+			)
+		end),
+	})
+end
 
 local function scheme_for_appearance(appearance)
 	if appearance:find("Dark") then
@@ -12,6 +62,7 @@ end
 local config = wezterm.config_builder()
 
 -- settings
+config.window_decorations = "RESIZE"
 config.hide_tab_bar_if_only_one_tab = true
 config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
 -- config.color_scheme = "s3r0 modified (terminal.sexy)"
@@ -26,7 +77,7 @@ config.leader = { key = ";", mods = "CTRL" }
 
 -- Dim inactive panes
 config.inactive_pane_hsb = {
-	saturation = 0.24,
+	saturation = 0.3,
 	brightness = 0.5,
 }
 
@@ -39,6 +90,21 @@ config.window_padding = {
 
 config.keys = {
 	{ key = "[", mods = "LEADER", action = act.ActivateCopyMode },
+	{ key = "n", mods = "LEADER", action = act.ShowTabNavigator },
+	{ key = "t", mods = "LEADER", action = act.SpawnTab("CurrentPaneDomain") },
+
+	-- Pane keybindings
+	{ key = "h", mods = "LEADER", action = act.ActivatePaneDirection("Left") },
+	{ key = "j", mods = "LEADER", action = act.ActivatePaneDirection("Down") },
+	{ key = "k", mods = "LEADER", action = act.ActivatePaneDirection("Up") },
+	{ key = "l", mods = "LEADER", action = act.ActivatePaneDirection("Right") },
+	{ key = "%", mods = "LEADER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+	{ key = "-", mods = "LEADER", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+	{ key = "f", mods = "LEADER", action = act.TogglePaneZoomState },
+
+	-- Workspace keybindings
+	{ key = "w", mods = "LEADER", action = act.ShowLauncherArgs({ flags = "FUZZY|WORKSPACES" }) },
+	{ key = "p", mods = "LEADER", action = choose_project() },
 }
 
 -- rakis color schemes
@@ -89,20 +155,12 @@ config.color_schemes = {
 -- config.keys = {
 -- 	-- send C-b when C-b is pressed twice
 -- 	{ key = ";", mods = "LEADER", action = act.SendKey({ key = "b", mods = "CTRL" }) },
--- 	{ key = "[", mods = "LEADER", action = act.ActivateCopyMode },
 --
 -- 	-- Pane keybindings
--- 	{ key = "s", mods = "LEADER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
--- 	{ key = "v", mods = "LEADER", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
--- 	{ key = "h", mods = "LEADER", action = act.ActivatePaneDirection("Left") },
--- 	{ key = "j", mods = "LEADER", action = act.ActivatePaneDirection("Down") },
--- 	{ key = "k", mods = "LEADER", action = act.ActivatePaneDirection("Up") },
--- 	{ key = "l", mods = "LEADER", action = act.ActivatePaneDirection("Right") },
 -- 	{ key = "q", mods = "LEADER", action = act.CloseCurrentPane({ confirm = true }) },
 --
 -- 	-- Tab keybindings
 -- 	{ key = "t", mods = "LEADER", action = act.SpawnTab("CurrentPaneDomain") },
--- 	{ key = "n", mods = "LEADER", action = act.ShowTabNavigator },
 -- 	{
 -- 		key = "e",
 -- 		mods = "LEADER",
@@ -120,8 +178,6 @@ config.color_schemes = {
 -- 		}),
 -- 	},
 --
--- 	-- Workspace keybindings
--- 	{ key = "w", mods = "LEADER", action = act.ShowLauncherArgs({ flags = "FUZZY|WORKSPACES" }) },
 -- }
 
 return config
