@@ -1,8 +1,8 @@
-{ pkgs, ... }: {
+{ ... }: {
   programs.git = {
     enable = true;
-    userName = "rebebop";
-    userEmail = "1941785+rebebop@users.noreply.github.com";
+    userName = "sample-usr";
+    userEmail = "1941785+sample-usr@users.noreply.github.com"; 
 
     extraConfig = {
       pull = {
