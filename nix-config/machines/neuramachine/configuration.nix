@@ -14,13 +14,17 @@
     home = "/Users/raza";
   };
 
-  # Disable bottom right hot corner for macOS notes
-  system.defaults.dock.wvous-br-corner = 1;
+  system.defaults = {
+    # Disable bottom right hot corner for macOS notes
+    dock.wvous-br-corner = 1;
+    dock.autohide = true;
+    screencapture.location = "~/screenshots";
+  };
 
   programs.fish.enable = true;
 
   environment.systemPackages = with pkgs; [ 
-    neofetch
+    devenv
     android-tools
     timewarrior # not available in home-manager yet
     nb # command line note taking
