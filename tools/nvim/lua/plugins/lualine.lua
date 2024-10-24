@@ -1,3 +1,11 @@
+local function wordcount()
+  return tostring(vim.fn.wordcount().words) .. " words"
+end
+
+local function is_markdown()
+  return vim.bo.filetype == "markdown" or vim.bo.filetype == "asciidoc"
+end
+
 return {
   "nvim-lualine/lualine.nvim",
   opts = function()
@@ -62,6 +70,7 @@ return {
         },
         lualine_y = {
           { "location", padding = { left = 0, right = 1 } },
+          { wordcount, cond = is_markdown },
         },
         lualine_z = {},
       },
