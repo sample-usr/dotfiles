@@ -28,6 +28,7 @@
     android-tools
     timewarrior # not available in home-manager yet
     nb # command line note taking
+    pulumi-bin
   ];
 
   homebrew = {
