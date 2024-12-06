@@ -137,7 +137,7 @@ alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
 [[on-window-detected]]
-if.app-id = 'org.mozilla.firefox'
+if.app-id = 'org.mozilla.com.zen.browser'
 run = 'move-node-to-workspace B'
 
 [[on-window-detected]]
