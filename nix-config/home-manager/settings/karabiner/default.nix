@@ -1,7 +1,7 @@
 { config, ... }:
 
 {
-  home.file.".config/aerospace" = {
+  home.file.".config/karabiner" = {
     source = config.lib.file.mkOutOfStoreSymlink ./config;
   };
 }

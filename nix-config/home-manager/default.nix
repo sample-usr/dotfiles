@@ -5,9 +5,7 @@ in {
   imports = [
     ./settings/direnv.nix
     ./settings/git.nix
-    ./settings/zellij.nix
-    ./settings/taskwarrior.nix
-    ./settings/aerospace
+    ./settings/karabiner
     ./settings/starship.nix
   ];
 
@@ -19,7 +17,7 @@ in {
     # Generally, you should not change this value, even if you update home-manager.
     # If you do change this make sure to read the release notes to make sure everything
     # will work.
-    home.stateVersion = "24.05";
+    home.stateVersion = "24.11";
 
     # programs without any extensive configuration
     programs = {
@@ -37,7 +35,6 @@ in {
     fonts.fontconfig.enable = true;
 
     home.packages = with pkgs; [
-      cyberduck
       ansible
       ansible-lint
     ];

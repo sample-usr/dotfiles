@@ -23,12 +23,9 @@
 
   programs.fish.enable = true;
 
-  environment.systemPackages = with pkgs; [ 
-    devenv
+  environment.systemPackages = with pkgs; [
     android-tools
-    timewarrior # not available in home-manager yet
     nb # command line note taking
-    pulumi-bin
   ];
 
   homebrew = {
