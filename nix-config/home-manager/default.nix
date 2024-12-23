@@ -1,13 +1,21 @@
-{ pkgs, config, lib, home-manager, ... }:
+{
+  pkgs,
+  config,
+  lib,
+  home-manager,
+  ...
+}:
 
-let isDarwin = pkgs.stdenv.isDarwin;
-in {
+let
+  isDarwin = pkgs.stdenv.isDarwin;
+in
+{
   imports = [
     ./settings/direnv.nix
     ./settings/git.nix
     ./settings/karabiner
     ./settings/starship.nix
-    ./settings/nixvim.nix
+    ./settings/nixvim
   ];
 
   config = {
@@ -40,6 +48,8 @@ in {
       ansible-lint
     ];
 
-    home.sessionVariables = { EDITOR = "nvim"; };
+    home.sessionVariables = {
+      EDITOR = "nvim";
+    };
   };
 }

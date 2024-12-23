@@ -1,6 +1,0 @@
-{ ... }: {
-  programs.nixvim = {
-    enable = true;
-
-  };
-}
