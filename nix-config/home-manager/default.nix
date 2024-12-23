@@ -7,6 +7,7 @@ in {
     ./settings/git.nix
     ./settings/karabiner
     ./settings/starship.nix
+    ./settings/nixvim.nix
   ];
 
   config = {

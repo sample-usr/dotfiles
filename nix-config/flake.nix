@@ -11,9 +11,13 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ self, nixpkgs, nix-darwin, home-manager }: {
+  outputs = inputs@{ self, nixpkgs, nix-darwin, home-manager, nixvim }: {
     darwinConfigurations."Neuramachine" = nix-darwin.lib.darwinSystem {
       modules = [
         ./machines/neuramachine/configuration.nix
@@ -23,8 +27,10 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.verbose = true;
-          home-manager.users.raza.imports =
-            [ ./machines/neuramachine/home-manager.nix ];
+          home-manager.users.raza.imports = [
+            ./machines/neuramachine/home-manager.nix
+            nixvim.homeManagerModules.nixvim
+          ];
         }
       ];
     };
