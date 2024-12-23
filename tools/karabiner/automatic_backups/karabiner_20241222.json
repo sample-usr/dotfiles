@@ -1,57 +1,33 @@
 {
-  "global": { "show_in_menu_bar": false },
+  "global": {
+    "show_in_menu_bar": false
+  },
   "profiles": [
     {
       "complex_modifications": {
         "rules": [
-          {
-            "description": "Switch to different applications using right_command combo",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "t",
-                  "modifiers": {
-                    "mandatory": ["right_command"],
-                    "optional": ["any"]
-                  }
-                },
-                "to": [{ "shell_command": "open -a 'Wezterm.app'" }],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "c",
-                  "modifiers": {
-                    "mandatory": ["right_command"],
-                    "optional": ["any"]
-                  }
-                },
-                "to": [{ "shell_command": "open -a 'Slack.app'" }],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "b",
-                  "modifiers": {
-                    "mandatory": ["right_command"],
-                    "optional": ["any"]
-                  }
-                },
-                "to": [{ "shell_command": "open -a 'Zen Browser.app'" }],
-                "type": "basic"
-              }
-            ]
-          },
           {
             "description": "Caps Lock to Escape if pressed alone and LefCtrl otherwise",
             "manipulators": [
               {
                 "from": {
                   "key_code": "caps_lock",
-                  "modifiers": { "optional": ["any"] }
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
                 },
-                "to": [{ "key_code": "left_control" }],
-                "to_if_alone": [{ "key_code": "escape" }],
+                "to": [
+                  {
+                    "key_code": "left_control"
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "escape"
+                  }
+                ],
                 "type": "basic"
               }
             ]
@@ -61,14 +37,24 @@
             "manipulators": [
               {
                 "description": "Right shift -> Hyper Key",
-                "from": { "key_code": "quote" },
+                "from": {
+                  "key_code": "quote"
+                },
                 "to": [
                   {
                     "key_code": "left_shift",
-                    "modifiers": ["left_command", "left_control", "left_option"]
+                    "modifiers": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ]
                   }
                 ],
-                "to_if_alone": [{ "key_code": "quote" }],
+                "to_if_alone": [
+                  {
+                    "key_code": "quote"
+                  }
+                ],
                 "type": "basic"
               }
             ]
@@ -130,9 +116,17 @@
                 "description": "Open -a 'Firefox.app'",
                 "from": {
                   "key_code": "b",
-                  "modifiers": { "mandatory": ["any"] }
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
                 },
-                "to": [{ "shell_command": "open -a 'Firefox.app'" }],
+                "to": [
+                  {
+                    "shell_command": "open -a 'Firefox.app'"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -146,9 +140,17 @@
                 "description": "Open -a 'Kitty.app'",
                 "from": {
                   "key_code": "t",
-                  "modifiers": { "mandatory": ["any"] }
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
                 },
-                "to": [{ "shell_command": "open -a 'Kitty.app'" }],
+                "to": [
+                  {
+                    "shell_command": "open -a 'Kitty.app'"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -162,9 +164,17 @@
                 "description": "Open -a 'Slack.app'",
                 "from": {
                   "key_code": "s",
-                  "modifiers": { "mandatory": ["any"] }
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
                 },
-                "to": [{ "shell_command": "open -a 'Slack.app'" }],
+                "to": [
+                  {
+                    "shell_command": "open -a 'Slack.app'"
+                  }
+                ],
                 "type": "basic"
               }
             ]
@@ -225,9 +235,17 @@
                 ],
                 "from": {
                   "key_code": "u",
-                  "modifiers": { "mandatory": ["any"] }
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
                 },
-                "to": [{ "key_code": "volume_increment" }],
+                "to": [
+                  {
+                    "key_code": "volume_increment"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -240,9 +258,17 @@
                 ],
                 "from": {
                   "key_code": "j",
-                  "modifiers": { "mandatory": ["any"] }
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
                 },
-                "to": [{ "key_code": "volume_decrement" }],
+                "to": [
+                  {
+                    "key_code": "volume_decrement"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -255,9 +281,17 @@
                 ],
                 "from": {
                   "key_code": "i",
-                  "modifiers": { "mandatory": ["any"] }
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
                 },
-                "to": [{ "key_code": "display_brightness_increment" }],
+                "to": [
+                  {
+                    "key_code": "display_brightness_increment"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -270,9 +304,17 @@
                 ],
                 "from": {
                   "key_code": "k",
-                  "modifiers": { "mandatory": ["any"] }
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
                 },
-                "to": [{ "key_code": "display_brightness_decrement" }],
+                "to": [
+                  {
+                    "key_code": "display_brightness_decrement"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -285,9 +327,17 @@
                 ],
                 "from": {
                   "key_code": "p",
-                  "modifiers": { "mandatory": ["any"] }
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
                 },
-                "to": [{ "key_code": "play_or_pause" }],
+                "to": [
+                  {
+                    "key_code": "play_or_pause"
+                  }
+                ],
                 "type": "basic"
               }
             ]
@@ -348,9 +398,17 @@
                 ],
                 "from": {
                   "key_code": "h",
-                  "modifiers": { "mandatory": ["any"] }
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
                 },
-                "to": [{ "key_code": "left_arrow" }],
+                "to": [
+                  {
+                    "key_code": "left_arrow"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -363,9 +421,17 @@
                 ],
                 "from": {
                   "key_code": "j",
-                  "modifiers": { "mandatory": ["any"] }
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
                 },
-                "to": [{ "key_code": "down_arrow" }],
+                "to": [
+                  {
+                    "key_code": "down_arrow"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -378,9 +444,17 @@
                 ],
                 "from": {
                   "key_code": "k",
-                  "modifiers": { "mandatory": ["any"] }
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
                 },
-                "to": [{ "key_code": "up_arrow" }],
+                "to": [
+                  {
+                    "key_code": "up_arrow"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -393,9 +467,17 @@
                 ],
                 "from": {
                   "key_code": "l",
-                  "modifiers": { "mandatory": ["any"] }
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
                 },
-                "to": [{ "key_code": "right_arrow" }],
+                "to": [
+                  {
+                    "key_code": "right_arrow"
+                  }
+                ],
                 "type": "basic"
               }
             ]
@@ -403,7 +485,9 @@
         ]
       },
       "name": "Default",
-      "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+      "virtual_hid_keyboard": {
+        "keyboard_type_v2": "ansi"
+      }
     }
   ]
 }
