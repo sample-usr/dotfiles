@@ -46,6 +46,7 @@ in
     home.packages = with pkgs; [
       ansible
       ansible-lint
+      devbox
     ];
 
     home.sessionVariables = {

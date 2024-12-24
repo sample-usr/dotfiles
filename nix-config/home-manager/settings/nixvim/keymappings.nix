@@ -30,6 +30,25 @@
         action = "<C-w>l";
         mode = [ "n" ];
       }
+      {
+        key = "ss";
+        action = ":split<Return>";
+        mode = [ "n" ];
+      }
+      {
+        key = "sv";
+        action = ":vsplit<Return>";
+        mode = [ "n" ];
+      }
+
+      {
+        mode = "n";
+        key = "<leader>gg";
+        action = "<cmd>LazyGit<CR>";
+        options = {
+          desc = "LazyGit (root dir)";
+        };
+      }
     ];
   };
 }
